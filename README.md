@@ -1,11 +1,8 @@
-# Linux_Studying_Workflow
-
-A small repository to track the linux studying process in Arch environment.
-
-```
-graph TD
-  A[Start] --> B{Process};
-  B --> C{Decision};
-  C -- Yes --> D[End];
-  C -- No --> B;
+```mermaid
+  gitGraph
+    commit id: "1"
+    commit id: "2"
+    branch test
+    checkout test
+    commit id: "3"
 ```
