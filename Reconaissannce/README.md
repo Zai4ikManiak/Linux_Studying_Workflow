@@ -49,3 +49,51 @@ There are <ins>3 main categories of information obtained</ins> during reconaissa
 Attackers can access organizational information and use such information to identify key personnel and launch social engineering attacks to extract sensitive data about the entity.
 
 </details>
+
+<details>
+
+<summary>Network Information</summary>
+- Domain and sub-domains.
+- Network blocks.
+- Network topology, trusted routers, and firewalls.
+- IP addresses of the reachable systems.
+- Whois records.
+- DNS records and related information.
+
+</details>
+
+<details>
+
+<summary>System Information</summary>
+
+- Web server OS.
+- Location of web servers.
+- Publicly available email addresses.
+- Usernames, passwords, and so on.
+
+</details>
+
+---
+
+### Footprinting Threats
+
+The following are assorted threats made possible through reconaissannce:
+
+- **Social Engineering**
+	> Without using any intrusion methods, hackers directly and indirectly collect information through persuasion and other means. Hackers gather crucial information from wiling employees who are unaware of the hacker's intent.
+
+- **System and Network Attacks**
+	>Footprinting enables an attacker to perform system and network attacks. Thus, attackers can gather information related to the target organization's system configuration, the OS running on the machine, and so on.
+	>Using this information, attackers can find vulnerabilities in the target system and then exploit such vulnerabilities. They can then take control of the target system or the entire network.
+
+- **Information Leakage**
+	> Information leakage poses a threat to any organization. If sensitive information of an entity falls into the hands of attackers, they can mount an attack based on the information or alternatively use it for monetary benefit.
+
+- **Privacy Loss**
+	>Through footprinting, hackers can access the systems and networks of the organization and even escalate the privileges up to admin levels, resulting in the loss of privacy for the organization as a whole and for its individual personnel.
+
+- **Corporate Espionage**
+	> Corporate espionage is a central threat to organizations, as competitors often aim to attempt to acquire sensitive data through footprinting. Through this approach, competitors can launch similar products in the market, alter prices, and generally undermine the market position of a target organization.
+
+- **Business Loss**
+	> Footprinting can have a major effect on organizations such as online business and other e-commerce websites as well as banking and finance-related business. Billions of dollars are lost every year due to malicious attacks by hackers.
