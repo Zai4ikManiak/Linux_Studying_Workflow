@@ -107,6 +107,6 @@ The following table lists teh search operators that work with the Google search 
 </details>
 
 For information and reference the following links were used:
-	- [Google Guide Reference Page](https://www.googleguide.com/advanced_operators_reference.html "Advanced Google Search Operators")
+- [Google Guide Reference Page](https://www.googleguide.com/advanced_operators_reference.html "Advanced Google Search Operators")
 
 ***
