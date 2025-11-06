@@ -106,7 +106,22 @@ The following table lists teh search operators that work with the Google search 
 
 </details>
 
+---
+
 For information and reference the following links were used:
 - [Google Guide Reference Page](https://www.googleguide.com/advanced_operators_reference.html "Advanced Google Search Operators")
+- [Google Hacking Database](https://www.exploit-db.com/google-hacking-database)
 
-***
+---
+
+You may use many of the basic operators and search opeators with each other. However, there are some that must be used by themselves and others that you should be careful about using together.
+
+Search operators that <ins>cannot be combined</ins>
+- All the search operators whose names being with "**allin**".
+- Syntaxes that request special information, e.g. `define:`.
+- Page-specific search operators, e.g., `cache:`, `info:`, `related:`.
+
+Be careful about the effects of a search operator when you use more than one of them in a query.
+- Do not use serach operators that will cancel each other.
+- Take care not to exclude all results when using certain serach operators more than once in a query.
+- Focus your search by using several search operators.
