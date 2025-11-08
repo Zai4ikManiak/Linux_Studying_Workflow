@@ -1,8 +1,27 @@
+### What can an Hacker do with Google Hacking?
+
+>[!NOTE]
+>An attacker craete complex search-engine queries to filter large amounts of search results to obtain information related to computer security.
+
+These queries exploit advanced Google search operators to uncover the following:
+
+- Sensitive files
+	Such as configuration files, database dumps, and log files that may obtain contain usernames, passwords, or other confidential data.
+- Exposed directories
+	Open directories on web servers that might contain sensitive information.
+- Error messages
+	Web server or application error messages that mey reveal server configurations or vulnerabilities.
+- Vulnerable devices
+	Identifying specific types of devices or software versions known to have vulnerabilities.
+
 ### Advanced Search Operators
 
 <details>
 
 <summary>Web Search Service:</summary>
+
+>[!NOTE]
+>Google hacking refers to the use of advanced Google search operators for *creating complex search queries* to extract sensitive or hidden information that helps attackers *find vulnerable targets*.
 
 | Search Operator Syntax | Description |
 | :---: | :--- |
