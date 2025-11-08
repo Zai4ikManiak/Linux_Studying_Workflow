@@ -6,13 +6,13 @@
 These queries exploit advanced Google search operators to uncover the following:
 
 - Sensitive files
-	Such as configuration files, database dumps, and log files that may obtain contain usernames, passwords, or other confidential data.
+	>Such as configuration files, database dumps, and log files that may obtain contain usernames, passwords, or other confidential data.
 - Exposed directories
-	Open directories on web servers that might contain sensitive information.
+	>Open directories on web servers that might contain sensitive information.
 - Error messages
-	Web server or application error messages that mey reveal server configurations or vulnerabilities.
+	>Web server or application error messages that mey reveal server configurations or vulnerabilities.
 - Vulnerable devices
-	Identifying specific types of devices or software versions known to have vulnerabilities.
+	>Identifying specific types of devices or software versions known to have vulnerabilities.
 
 ### Advanced Search Operators
 
