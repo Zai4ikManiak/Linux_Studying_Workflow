@@ -1,4 +1,4 @@
-The following table lists teh search operators that work with the Google search service.
+### Advanced Search Operators
 
 <details>
 
