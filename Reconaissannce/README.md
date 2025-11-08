@@ -8,7 +8,7 @@ This technique can be categorized into <ins>2 categories</ins>:
 - **Passive Footprinting**
 	> Gethering information about the target <ins>without direct interaction</ins> with the it.
 	- Search Engines
-		- [Google Searching](Advanced_Google_Search_Operators Cheat Sheet.md)
+		- [Google Searching](Reconaissannce/Advanced_Google_Search_Operators Cheat Sheet.md)
 	- Social networking
 	- Open-Source Intelligence (OSINT) gathering
 	- Proprietary database and paid services
