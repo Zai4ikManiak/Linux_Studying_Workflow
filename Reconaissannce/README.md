@@ -9,6 +9,7 @@ This technique can be categorized into <ins>2 categories</ins>:
 	> Gethering information about the target <ins>without direct interaction</ins> with the it.
 	- Search Engines
 		- [Google Searching](https://github.com/Zai4ikManiak/Linux_Studying_Workflow/blob/main/Reconaissannce/Advanced_Google_Search_Operators%20Cheat%20Sheet.md)
+		- SHODAN
 	- Social networking
 	- Open-Source Intelligence (OSINT) gathering
 	- Proprietary database and paid services
