@@ -14,6 +14,8 @@ These queries exploit advanced Google search operators to uncover the following:
 - Vulnerable devices
 	>Identifying specific types of devices or software versions known to have vulnerabilities.
 
+---
+
 ### Advanced Search Operators
 
 <details>
