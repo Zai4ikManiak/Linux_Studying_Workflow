@@ -34,3 +34,4 @@ asd
 As reference was used:
 - [Shodan Filter Reference]()
 - [Advanced Shodan Search Filter](https://www.shodan.io/search/advanced)
+- [External Links](https://github.com/JavierOlmedo/shodan-filters?utm_source=chatgpt.com)
