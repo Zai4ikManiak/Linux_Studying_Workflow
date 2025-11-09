@@ -19,4 +19,16 @@ The information gained from these services is applied to many areas:
 	>measure how many devices have been impacted by ransomware.
 
 ---
+### Search Query Cheat Sheets
 
+To get the most out of Shodan it's important to understand the search query syntax. Below are the Cheat Sheets used for different categories:
+
+<details>
+
+<summary>Network</summary>
+
+| Description | Command | Example |
+| :--- | :--- | :--- |
+| From this host | `ip:` | `ip:1.1.1.1,8.8.8.8` |
+
+<details>
