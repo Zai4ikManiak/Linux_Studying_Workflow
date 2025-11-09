@@ -25,19 +25,12 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <details>
 
-<summary>Network</summary>
+<summary>General Search</summary>
 
-| Description | Command | Example |
-| :--- | :--- | :--- |
-| From this host | `ip: ` | `ip:1.1.1.1,8.8.8.8` |
-| To this port | `port: ` | `port:22,3389` |
-| ASN | `asn: ` | `asn:AS13335` |
-| On this hostname | `hostname: ` | `hostname:cloudflare` |
-| From organization | `org: ` | `org:Cloudflare` |
-| ISP | `isp: ` | `isp:StarNet` |
-| Has IPv6 | `has_ipv6: ` | `has_ipv6:true`; `has_ipv6:false` |
+asd
 
-<details>
+</details>
 
 As reference was used:
+- [Shodan Filter Reference]()
 - [Advanced Shodan Search Filter](https://www.shodan.io/search/advanced)
