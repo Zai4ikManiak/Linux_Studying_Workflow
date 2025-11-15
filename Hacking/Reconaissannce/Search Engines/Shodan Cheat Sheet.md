@@ -34,7 +34,7 @@ To get the most out of Shodan it's important to understand the search query synt
 | `before` | Only show results before the given date (dd/mm/yyyy) string. | | `shodan search apache --limit 3 before:2025-10-1` |
 | `city` | Name of the city string. |  `city:Chisinau` | `shodan search apache --limit 3 city:Chisinau` |
 | `country` | 2-letter country code string. | `country:MD` | `shodan search apache --limit 3 country:MD,city:Chisinau` |
-| `geo` | Accepts between 2 and 4 parameters. If 2 parameters: latitude,longitude. If 3 parameters: latitude,longitude,range. If 4 parameters: top left latitude, top left longitude, bottom right latitude, bottom right longitude. | `geo:47.06146704730932,28.86888084378684,10` | shodan search --limit 10 geo:47.06146704730932,28.86888084378684,10 |
+| `geo` | Accepts between 2 and 4 parameters. If 2 parameters: latitude,longitude. If 3 parameters: latitude,longitude,range. If 4 parameters: top left latitude, top left longitude, bottom right latitude, bottom right longitude. | `geo:47.06146704730932,28.86888084378684,10` | `shodan search --limit 10 geo:47.06146704730932,28.86888084378684,10` |
 | `hash` | Hash of the data property integer. | `hash:-82460412` | `shodan search --limit 10 hash:-82460412` |
 | `has_ipv6` | True/False boolean. | `has_ipv6:true` | `shodan search --limit 10 country:MD has_ipv6:true` |
 | `has_screenshot` | True/False boolean. | `has_screenshot:true` | `shodan search --limit 10 country:MD has_screenshot:true` |
