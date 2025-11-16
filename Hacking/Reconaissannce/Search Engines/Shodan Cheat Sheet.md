@@ -52,6 +52,27 @@ To get the most out of Shodan it's important to understand the search query synt
 
 </details>
 
+<details>
+
+<summary>HTTP Filters</summary>
+
+| Name | Description | Browser Example | Console Example |
+| :---: | :---: | :---: | :---: |
+| `http.component` | Name of web technology used on the website. | `http.component:"OpenSSL"` | `shodan search --limit 10 http.component:OpenSSL` |
+| `http.component_category` | Category of web components used on the website. | `http.component_category:"CMS" http.component:"WordPress"` | `shodan search --limit 10 http.component_category:"CMS" http.component:"WordPress"` |
+| `http.html` | HTML of web banners. | `http.html:footer` | `shodan search --limit 10 http.html:footer` |
+| `http.html_hash` | Hash of the website HTML. | `http.html_hash:-1205993860` | `shodan search --limit 10 http.html_hash:-1205993860` |
+| `http.status` | Response status code. | `http.status:200` | `shodan search --limit 10 http.status:200` |
+| `http.title` | Title for the web banners website. | `http.title:"Admin"` | `shodan search --limit 10 http.component:"WordPress" http.title:"Admin"` |
+
+</details>
+
+<details>
+
+<summary>NTP Filters</summary>
+
+</details>
+
 As reference was used:
 - [Shodan Filter Reference]()
 - [Advanced Shodan Search Filter](https://www.shodan.io/search/advanced)
