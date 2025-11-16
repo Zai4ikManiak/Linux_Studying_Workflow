@@ -38,7 +38,7 @@ To get the most out of Shodan it's important to understand the search query synt
 | `hash` | Hash of the data property integer. | `hash:-82460412` | `shodan search --limit 10 hash:-82460412` |
 | `has_ipv6` | True/False boolean. | `has_ipv6:true` | `shodan search --limit 10 country:MD has_ipv6:true` |
 | `has_screenshot` | True/False boolean. | `has_screenshot:true` | `shodan search --limit 10 country:MD has_screenshot:true` |
-| `hostname` | Full hostname for the device string. | `shodan search --limit 10 country:MD hostname:mivocloud` |
+| `hostname` | Full hostname for the device string. | `hostname:mivocloud` | `shodan search --limit 10 country:MD hostname:mivocloud` |
 | `ip` | Alias for net filter string. | `ip:104.16.0.0/12` | `shodan search --limit 10 ip:104.16.0.0/12` |
 | `isp` | ISP managing the netblocking string. | `isp:StarNet isp:Solutii isp:SRL` | `shodan search --limit 10 isp:StarNet isp:Solutii isp:SRL` |
 | `net` | Network range in CIDR notation (ex. 199.4.1.0/24) string. | `net:104.16.0.0/12` | `shodan search --limit 10 net:104.16.0.0/12` |
