@@ -27,7 +27,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <summary>General Search</summary>
 
-###Network Search Filters
+### Network Search Filters
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
@@ -35,7 +35,7 @@ To get the most out of Shodan it's important to understand the search query synt
 | `has_ipv6` | Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4. | `has_ipv6:true` | `shodan search --limit 3 has_ipv6:true` |
 
 ---
-###Location
+### Location
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
@@ -68,7 +68,7 @@ To get the most out of Shodan it's important to understand the search query synt
 | `vpn` |
 
 ---
-###Screenshot
+### Screenshot
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
