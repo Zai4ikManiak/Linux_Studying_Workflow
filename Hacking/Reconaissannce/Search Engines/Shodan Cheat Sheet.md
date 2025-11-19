@@ -1,4 +1,4 @@
-### What is Shodan?
+# What is Shodan?
 
 Shodan is a search engine for Internet-connected devices.
 
@@ -19,7 +19,7 @@ The information gained from these services is applied to many areas:
 	>measure how many devices have been impacted by ransomware.
 
 ---
-### Search Query Cheat Sheets
+# Search Query Cheat Sheets
 
 To get the most out of Shodan it's important to understand the search query syntax. Below are the Cheat Sheets used for different categories:
 
@@ -27,7 +27,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <summary>General Search</summary>
 
-<ins>**Network Search Filters**</ins>
+###Network Search Filters
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
@@ -35,7 +35,7 @@ To get the most out of Shodan it's important to understand the search query synt
 | `has_ipv6` | Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4. | `has_ipv6:true` | `shodan search --limit 3 has_ipv6:true` |
 
 ---
-<ins>**Location**</ins>
+###Location
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
@@ -45,8 +45,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 
 ---
-
-<ins>**Metadata**</ins>
+### Metadata
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
@@ -68,7 +67,8 @@ To get the most out of Shodan it's important to understand the search query synt
 | `nas` |
 | `vpn` |
 
-<ins>**Screenshot**</ins>
+---
+###Screenshot
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
