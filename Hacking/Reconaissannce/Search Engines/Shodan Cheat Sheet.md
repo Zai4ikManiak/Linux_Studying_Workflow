@@ -78,6 +78,8 @@ To get the most out of Shodan it's important to understand the search query synt
 | `nas` |
 | `vpn` |
 
+</details>
+
 ---
 
 <details>
