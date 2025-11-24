@@ -78,8 +78,6 @@ To get the most out of Shodan it's important to understand the search query synt
 | `nas` |
 | `vpn` |
 
----
-
 </details>
 
 <details>
@@ -92,8 +90,6 @@ To get the most out of Shodan it's important to understand the search query synt
 | `screenshot.hash` | Find devices whose visual appearance (as captured in Shodan’s automatic screenshots) matches a specific image hash. | `screenshot.hash:1437554350` | `shodan search --limit 3 screenshot.hash:1437554350` |
 | `screenshot.label` | Is used to filter devices or hosts based on labels detected in their screenshots. | `screenshot.label:ics` | `shodan search --limit 3 screenshot.label:ics` |
 
----
-
 </details>
 
 <details>
@@ -105,6 +101,29 @@ To get the most out of Shodan it's important to understand the search query synt
 | `cloud.provider` | Used to search for devices, services, or hosts that are running on a specific cloud provider. | `cloud.provider:"Amazon"` | `shodan search --limit 3 cloud.provider:"Amazon"` |
 | `cloud.region` | Used to search for hosts that are located in a specific geographic region within a cloud provider’s infrastructure. | `cloud.region:"us-east-1"` | `shodan search --limit 3 cloud.region:"us-east-1"` |
 | `cloud.service` | Search for hosts that Shodan has identified as running on a *specific cloud service offering*, such as a managed service or infrastructure product provided by a cloud vendor. | `cloud.service:"Cloudflare"` | `shodan search --limit 3 cloud.service:"Cloudflare"` |
+
+</details>
+
+<details>
+
+<summary>HTTP</summary>
+
+| Name | Description | Browser Example | Console Example |
+| :---: | :---: | :---: | :---: |
+| `http.component` | Search for web servers whose *HTML content, scripts, assets, or metadata indicate they are using a specific software component*. | `http.component:"wordpress"` | `shodan search --limit 3 http.component:"wordpress"` |
+| `http.component_category` | Search for web servers based on the category of web technologies detected in their HTTP responses. | `http.component_category:"wordpress"` | `shodan search --limit 3 http.component_category:"wordpress"` |
+| `http.dom_hash` | search for web servers based on the *hash of their HTML DOM (Document Object Model)*. This is useful for detecting *identical or very similar web pages*, even if other metadata like headers or IPs differ. | `http.dom_hash:"abcd1234efgh5678"` | `shodan search --limit 3 http.dom_hash:"abcd1234efgh5678"` |
+| `http.favicon.hash` | Search for web servers based on the hash of their favicon. | `http.favicon.hash:1234567890` | `shodan search --limit 3 http.favicon.hash:1234567890` |
+| `http.headers_hash` | Search for web servers based on a *hash of their HTTP headers*. Instead of looking at the content of the web page or favicon, this filter focuses on the structure and values of the HTTP headers returned by the server. | `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
+| `http.html` | Search for web servers by looking for *specific text inside the raw HTML body* of their HTTP responses. | `http.html:"Admin Login"` | `shodan search --limit 3 http.html:"Admin Login"` |
+| `http.html_hash` | Search for web servers based on a *hash of their HTML content*. Unlike http.html, which searches for literal text strings in the HTML, this filter identifies pages that are structurally identical by comparing the hash of the full HTML response. | `http.html_hash:1234567890abcdef` | `shodan search --limit 3 http.html_hash:1234567890abcdef` |
+| `http.robots_hash` | Search for web servers based on a *hash of their robots.txt file*. | `http.robots_hash:abcdef1234567890` | `shodan search --limit 3 http.robots_hash:abcdef1234567890` |
+| `http.securitytxt` | Used to search for web servers that *host a security.txt file* and optionally match specific text inside it. | `http.securitytxt:"security@example.com"` | `shodan search --limit 3 http.securitytxt:"security@example.com"` |
+| `http.server_hash` | Used to search for web servers based on a *hash of the Server HTTP header*. | `http.server_hash:547046460` | `shodan search --limit 3 http.server_hash:547046460` |
+| `http.status` | Search for web servers based on the HTTP status code they return in response to Shodan’s crawl request. | `http.status:403` | `shodan search --limit 3 http.status:403` |
+| `http.title` | Search for web servers based on the *text inside the <title> HTML* tag of their webpage. | `http.title:"Admin Login"` | `shodan search --limit 3 http.title:"Admin Login"` |
+| `http.title_hash` | Search for web servers based on a *hash of the <title> tag* from their HTML response | `http.title_hash:123456789` | `shodan search --limit 3 http.title_hash:123456789` |
+| `http.waf` | Search for web servers where Shodan has detected the presence of a *Web Application Firewall (WAF)*. | `http.waf:"Cloudflare"` | `shodan search --limit 3 http.waf:"Cloudflare"` |
 
 </details>
 
