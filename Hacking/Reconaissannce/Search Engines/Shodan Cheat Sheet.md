@@ -79,11 +79,16 @@ To get the most out of Shodan it's important to understand the search query synt
 | `vpn` |
 
 ---
-### Screenshot
+
+<details>
+
+<summary>Screenshots</summary>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
 | `has_screenshot` | Limit results to hosts for which Shodan has captured a *web interface screenshot*. | `has_screenshot:true` | `shodan search --limit 3 has_screenshot:true` |
+| `screenshot.hash` | Find devices whose visual appearance (as captured in Shodan’s automatic screenshots) matches a specific image hash. | `screenshot.hash:1437554350` | `shodan search --limit 3 screenshot.hash:1437554350` |
+| `screenshot.label` | Is used to filter devices or hosts based on labels detected in their screenshots. | `screenshot.label:ics` | `shodan search --limit 3 screenshot.label:ics` |
 
 </details>
 
