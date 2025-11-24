@@ -78,9 +78,9 @@ To get the most out of Shodan it's important to understand the search query synt
 | `nas` |
 | `vpn` |
 
-</details>
-
 ---
+
+</details>
 
 <details>
 
@@ -91,6 +91,20 @@ To get the most out of Shodan it's important to understand the search query synt
 | `has_screenshot` | Limit results to hosts for which Shodan has captured a *web interface screenshot*. | `has_screenshot:true` | `shodan search --limit 3 has_screenshot:true` |
 | `screenshot.hash` | Find devices whose visual appearance (as captured in Shodan’s automatic screenshots) matches a specific image hash. | `screenshot.hash:1437554350` | `shodan search --limit 3 screenshot.hash:1437554350` |
 | `screenshot.label` | Is used to filter devices or hosts based on labels detected in their screenshots. | `screenshot.label:ics` | `shodan search --limit 3 screenshot.label:ics` |
+
+---
+
+</details>
+
+<details>
+
+<summary>Cloud</summary>
+
+| Name | Description | Browser Example | Console Example |
+| :---: | :---: | :---: | :---: |
+| `cloud.provider` | Used to search for devices, services, or hosts that are running on a specific cloud provider. | `cloud.provider:"Amazon"` | `shodan search --limit 3 cloud.provider:"Amazon"` |
+| `cloud.region` | Used to search for hosts that are located in a specific geographic region within a cloud provider’s infrastructure. | `cloud.region:"us-east-1"` | `shodan search --limit 3 cloud.region:"us-east-1"` |
+| `cloud.service` | Search for hosts that Shodan has identified as running on a *specific cloud service offering*, such as a managed service or infrastructure product provided by a cloud vendor. | `cloud.service:"Cloudflare"` | `shodan search --limit 3 cloud.service:"Cloudflare"` |
 
 </details>
 
