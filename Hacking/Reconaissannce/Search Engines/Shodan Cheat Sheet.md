@@ -129,6 +129,34 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <details>
 
+<summary>SSL</summary>
+
+| Name | Description | Browser Example | Console Example |
+| :---: | :---: | :---: | :---: |
+| `ssl` | Used to match *raw SSL/TLS data blocks* that Shodan captured from a service. | `ssl:"TLSv1.2"` | `shodan search --limit 3 ssl:"TLSv1.2"` |
+| `has_ssl` | Returns results based solely on whether a service *provides SSL/TLS information, regardless of the port or protocol*. | `has_ssl:true` | `shodan search --limit 3 has_ssl:true` |
+| `ssl.alpn` | Search for hosts based on the *Application-Layer Protocol Negotiation (ALPN)* protocols they advertise during the TLS handshake. | `ssl.alpn:imap` | `shodan search --limit 3 ssl.alpn:imap`|
+| `ssl.cert.alg` | Search for hosts based on the *algorithm used to sign the SSL/TLS certificate*. It matches the *certificate signature algorithm* (not the key algorithm), meaning the crypto algorithm used by the Certificate Authority (CA) to sign the certificate. | `ssl.cert.alg:sha1` | `shodan search --limit 3 ssl.cert.alg:sha1` |
+| `ssl.cert.expired` | Search for hosts based on whether the SSL/TLS certificate they presented is currently expired. | `ssl.cert.expired:true` | `shodan search --limit 3 ssl.cert.expired:true` |
+| `ssl.cert.extension` | Search for hosts based on the X.509 certificate extensions present in the certificate the host provides. | `ssl.cert.extension:certificatePolicies` | `shodan search --limit 3 ssl.cert.extension:certificatePolicies` |
+| `ssl.cert.fingerprint` | Search for hosts by the *cryptographic fingerprint (hash)* of the certificate they present during the TLS handshake. | `ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` | `shodan search --limit 3 ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` |
+| `ssl.cert.issuer.cn` | search for hosts based on the *Common Name (CN)* of the *certificate issuer* — essentially, the Certificate Authority (CA) that signed the certificate. | `ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` | `shodan search --limit 3 ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` |
+| `ssl.cert.pubkey.bits` | Search for hosts based on the *size (in bits) of the public key* in the SSL/TLS certificate presented by the server. This is useful for identifying certificates that may be weak (small key sizes) or strong (modern large key sizes). | `ssl.cert.pubkey.bits:1024` | `shodan search --limit 3 ssl.cert.pubkey.bits:1024` |
+| `ssl.cert.pubkey.type` | Search for hosts based on the *type of public key* used in the SSL/TLS certificate the host presents. | `ssl.cert.pubkey.type:ECDSA` | `shodan search --limit 3 ssl.cert.pubkey.type:ECDSA` |
+| `ssl.cert.serial` | Search for hosts based on the *serial number of the SSL/TLS certificate* they present. | `ssl.cert.serial:0x1A2B3C4D5E6F` | `shodan search --limit 3 ssl.cert.serial:0x1A2B3C4D5E6F` |
+| `ssl.cert.subject.cn` | Search for hosts based on the *Common Name (CN)* in the *subject* of the SSL/TLS certificate they present. This represents the *primary domain or hostname* the certificate was issued for. | `ssl.cert.subject.cn:"example.com"` | `shodan search --limit 3 ssl.cert.subject.cn:"example.com"` |
+| `ssl.chain_count` | Search for hosts based on the *number of certificates in the SSL/TLS chain* presented by the server. | `ssl.chain_count:3` | `shodan search --limit 3 ssl.chain_count:3` |
+| `ssl.cipher.bits` | Search for hosts based on the *bit strength of the cipher* used in the SSL/TLS connection during the handshake. | `ssl.cipher.bits:128` | `shodan search --limit 3 ssl.cipher.bits:128` |
+| `ssl.cipher.name` | Search for hosts based on the *name of the cipher suite* used in the SSL/TLS connection during the handshake. | `ssl.cipher.name:TLS_AES_256_GCM_SHA384` | `shodan search --limit 3 ssl.cipher.name:TLS_AES_256_GCM_SHA384` |
+| `ssl.cipher.version` | Search for hosts based on the *TLS/SSL protocol version* negotiated during the handshake for a particular cipher. | `ssl.cipher.version:TLSv1` | `shodan search --limit 3 ssl.cipher.version:TLSv1` |
+| `ssl.ja3s` | Search for hosts based on their *JA3S fingerprint* — the *server-side TLS fingerprint* created from the parameters a server uses in its *Server Hello* message during a TLS handshake. | `ssl.ja3s:"b32309a26951912be6e0c6d1b99b6f20"` | `shodan search --limit 3 ssl.ja3s:"b32309a26951912be6e0c6d1b99b6f20"` |
+| `ssl.jarm` | Search for hosts based on their *JARM fingerprint* — a server‑side TLS fingerprinting method created by Salesforce to identify, classify, or cluster servers by the way they respond to *multiple crafted TLS Client Hello probes*. | `ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` | `shodan search --limit 3 ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` |
+| `ssl.version` | Search for hosts based on the *SSL/TLS protocol version* they support or negotiate during the TLS handshake. | `ssl.version:TLSv1.2` | `shodan search --limit 3 ssl.version:TLSv1.2` |
+
+</details>
+
+<details>
+
 <summary>Unknown per now</summary>
 
 | Name | Description | Browser Example | Console Example |
