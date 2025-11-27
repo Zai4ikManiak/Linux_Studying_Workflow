@@ -45,7 +45,7 @@ To get the most out of Shodan it's important to understand the search query synt
 </details>
 <details>
 
-<summary>has_ipv6: *Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4.*</summary>
+<summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4.</em></summary>
 
 ---
 **Example:**
