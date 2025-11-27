@@ -43,7 +43,7 @@ To get the most out of Shodan it's important to understand the search query synt
 </details>
 <details>
 
-<summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4.</em></summary>
+<summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are <u>reachable via IPv6 rather than (or in addition to) IPv4</u>.</em></summary>
 
 ---
 **Example:**
@@ -53,14 +53,22 @@ To get the most out of Shodan it's important to understand the search query synt
 	> `shodan search --limit 3 has_ipv6:true`
 ---
 </details>
+<details>
 
+<summary><strong>hostname:</strong> <em>Search for devices or hosts by their <u>DNS hostname</u>.</em></summary>
+
+---
+**Example:**
+- Browser Example:
+	> `hostname:"example.com"`
+- Command Line Example:
+	> `shodan search --limit 3 hostname:"example.com"`
+---
+</details>
 
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `asn` | Restricts your Shodan search results to hosts whose IP addresses fall within the AS you specify. | `asn:AS13335` | `shodan search --limit 3 asn:AS13335` |
-| `has_ipv6` | Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4. | `has_ipv6:true` | `shodan search --limit 3 has_ipv6:true` |
-| `hostname` | Search for devices or hosts by their *DNS hostname*. | `hostname:"example.com"` | `shodan search --limit 3 hostname:"example.com"` |
 | `ip` | Search for a specific IP address. | `ip:104.21.7.138` | `shodan search --limit 3 ip:104.21.7.138` |
 | `isp` | Search for hosts or devices based on their Internet Service Provider (ISP). | `isp:"Amazon.com"` | `shodan search --limit 3 isp:"Amazon.com"` |
 | `net` | Search for hosts within a *specific IP network or range*, using *CIDR notation*. | `net:5.252.178.0/24` | `shodan search --limit 3 net:5.252.178.0/24` |
