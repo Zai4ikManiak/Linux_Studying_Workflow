@@ -19,7 +19,7 @@ The information gained from these services is applied to many areas:
 	>measure how many devices have been impacted by ransomware.
 
 ---
-# Search Query Cheat Sheets
+# Advanced Search Filters
 
 To get the most out of Shodan it's important to understand the search query syntax. Below are the Cheat Sheets used for different categories:
 
@@ -28,6 +28,21 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary>General Search</summary>
 
 ### Network Search Filters
+
+<details>
+
+<summary>asn:</summary>
+
+Description:
+- Restricts your Shodan search results to hosts whose IP addresses fall within the AS you specify.
+
+Examples:
+- Browser Example:
+	>`asn:AS13335`
+- Command Line Example:	
+	>`shodan search --limit 3 asn:AS13335`
+
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
