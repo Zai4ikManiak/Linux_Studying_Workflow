@@ -36,11 +36,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>asn:</strong> <em>Search results to hosts whose IP addresses fall within the AS you specify.</em></summary>
 
 ---
-**Examples:**
-- Browser Example:
-	> `asn:AS13335`
-- Command Line Example:	
-	> `shodan search --limit 3 asn:AS13335`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `asn:AS13335` | `shodan search --limit 3 asn:AS13335` |
 ---
 </details>
 <details>
