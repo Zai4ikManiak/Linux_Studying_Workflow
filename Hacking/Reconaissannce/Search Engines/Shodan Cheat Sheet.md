@@ -42,8 +42,23 @@ To get the most out of Shodan it's important to understand the search query synt
 - Command Line Example:	
 	> `shodan search --limit 3 asn:AS13335`
 ---
-
 </details>
+<details>
+
+<summary>has\_ipv6:</summary>
+
+---
+**Description:** Identifies devices or services that are reachable via IPv6 rather than (or in addition to) IPv4.
+
+**Example:**
+- Browser Example:
+        > `has_ipv6:true`
+- Command Line Example:
+        > `shodan search --limit 3 has_ipv6:true`
+---
+</details>
+
+
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
