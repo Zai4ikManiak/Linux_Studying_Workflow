@@ -31,6 +31,8 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <details>
 
+---
+
 <summary><strong>asn:</strong> <em>Search results to hosts whose IP addresses fall within the AS you specify.</em></summary>
 
 ---
@@ -124,7 +126,6 @@ To get the most out of Shodan it's important to understand the search query synt
 	> `port:80,443`
 - Command Line Example:
 	> `shodan search --limit 3 port:80,443`
----
 </details>
 
 ---
