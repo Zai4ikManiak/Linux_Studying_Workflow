@@ -52,9 +52,9 @@ To get the most out of Shodan it's important to understand the search query synt
 
 **Example:**
 - Browser Example:
-        > `has_ipv6:true`
+	> `has_ipv6:true`
 - Command Line Example:
-        > `shodan search --limit 3 has_ipv6:true`
+	> `shodan search --limit 3 has_ipv6:true`
 ---
 </details>
 
