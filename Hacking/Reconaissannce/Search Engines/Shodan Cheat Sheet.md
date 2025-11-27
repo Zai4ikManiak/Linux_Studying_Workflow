@@ -90,13 +90,42 @@ To get the most out of Shodan it's important to understand the search query synt
 	> `shodan search --limit 3 isp:"Amazon.com"`
 ---
 </details>
+<details>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `net` | Search for hosts within a *specific IP network or range*, using *CIDR notation*. | `net:5.252.178.0/24` | `shodan search --limit 3 net:5.252.178.0/24` |
-| `org` | Search for hosts based on the *organization* that owns or is assigned the IP address. | `org:"Amazon.com"` | `shodan search --limit 3 org:"Amazon.com"` |
-| `port` | Find hosts that have a *specific network port open*. | `port:80,443` | `shodan search --limit 3 port:80,443` |
+<summary><strong>net:</strong> <em>Search for hosts within a <ins>specific IP network or range</ins>, using <ins>CIDR notation</ins>.</em></summary>
 
+---
+**Example:**
+- Browser Example:
+	> `net:5.252.178.0/24`
+- Command Line Example:
+	> `shodan search --limit 3 net:5.252.178.0/24`
+---
+</details>
+<details>
+
+<summary><strong>org:</strong> <em>Search for hosts based on the <ins>organization</ins> that owns or is assigned the IP address.</em></summary>
+
+---
+**Example:**
+- Browser Example:
+	> `org:"Amazon.com"`
+- Command Line Example:
+	> `shodan search --limit 3 org:"Amazon.com"`
+---
+</details>
+<details>
+
+<summary><strong>port:</strong> <em>Find hosts that have a <ins>specific network port open</ins>.</em></summary>
+
+---
+**Example:**
+- Browser Example:
+	> `port:80,443`
+- Command Line Example:
+	> `shodan search --limit 3 port:80,443`
+---
+</details>
 ---
 ### Location
 
