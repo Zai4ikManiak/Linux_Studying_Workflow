@@ -27,11 +27,11 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <summary>General Search</summary>
 
+---
+
 ### Network Search Filters
 
 <details>
-
----
 
 <summary><strong>asn:</strong> <em>Search results to hosts whose IP addresses fall within the AS you specify.</em></summary>
 
