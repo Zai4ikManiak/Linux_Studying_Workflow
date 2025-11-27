@@ -55,7 +55,7 @@ To get the most out of Shodan it's important to understand the search query synt
 </details>
 <details>
 
-<summary><strong>hostname:</strong> <em>Search for devices or hosts by their <u>DNS hostname</u>.</em></summary>
+<summary><strong>hostname:</strong> <em>Search for devices or hosts by their <ins>DNS hostname</ins>.</em></summary>
 
 ---
 **Example:**
