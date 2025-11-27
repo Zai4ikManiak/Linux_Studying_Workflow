@@ -46,11 +46,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are <ins>reachable via IPv6 rather than (or in addition to) IPv4</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `has_ipv6:true`
-- Command Line Example:
-	> `shodan search --limit 3 has_ipv6:true`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `has_ipv6:true` | `shodan search --limit 3 has_ipv6:true` |
 ---
 </details>
 <details>
@@ -58,11 +56,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>hostname:</strong> <em>Search for devices or hosts by their <ins>DNS hostname</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `hostname:"example.com"`
-- Command Line Example:
-	> `shodan search --limit 3 hostname:"example.com"`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `hostname:"example.com"` | `shodan search --limit 3 hostname:"example.com"` |
 ---
 </details>
 <details>
@@ -70,11 +66,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>ip:</strong> <em>Search for a <ins>specific IP address</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `ip:104.21.7.138`
-- Command Line Example:
-	> `shodan search --limit 3 ip:104.21.7.138`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ip:104.21.7.138` | `shodan search --limit 3 ip:104.21.7.138` |
 ---
 </details>
 
@@ -83,11 +77,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>isp:</strong> <em>Search for hosts or devices <ins>based on their Internet Service Provider (ISP)</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `isp:"Amazon.com"`
-- Command Line Example:
-	> `shodan search --limit 3 isp:"Amazon.com"`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `isp:"Amazon.com"` | `shodan search --limit 3 isp:"Amazon.com"` |
 ---
 </details>
 <details>
@@ -95,11 +87,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>net:</strong> <em>Search for hosts within a <ins>specific IP network or range</ins>, using <ins>CIDR notation</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `net:5.252.178.0/24`
-- Command Line Example:
-	> `shodan search --limit 3 net:5.252.178.0/24`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `net:5.252.178.0/24` | `shodan search --limit 3 net:5.252.178.0/24` |
 ---
 </details>
 <details>
@@ -107,11 +97,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>org:</strong> <em>Search for hosts based on the <ins>organization</ins> that owns or is assigned the IP address.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `org:"Amazon.com"`
-- Command Line Example:
-	> `shodan search --limit 3 org:"Amazon.com"`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `org:"Amazon.com"` | `shodan search --limit 3 org:"Amazon.com"` |
 ---
 </details>
 <details>
@@ -119,11 +107,9 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>port:</strong> <em>Find hosts that have a <ins>specific network port open</ins>.</em></summary>
 
 ---
-**Example:**
-- Browser Example:
-	> `port:80,443`
-- Command Line Example:
-	> `shodan search --limit 3 port:80,443`
+| Browser Example | Console Example |
+| :---: | :---: |
+| `port:80,443` | `shodan search --limit 3 port:80,443` |
 </details>
 
 ---
