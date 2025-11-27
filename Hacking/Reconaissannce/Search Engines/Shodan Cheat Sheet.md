@@ -127,6 +127,7 @@ To get the most out of Shodan it's important to understand the search query synt
 ---
 </details>
 ---
+
 ### Location
 
 | Name | Description | Browser Example | Console Example |
