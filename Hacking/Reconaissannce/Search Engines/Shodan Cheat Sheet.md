@@ -43,7 +43,7 @@ To get the most out of Shodan it's important to understand the search query synt
 </details>
 <details>
 
-<summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are <u>reachable via IPv6 rather than (or in addition to) IPv4</u>.</em></summary>
+<summary><strong>has_ipv6:</strong> <em>Identifies devices or services that are <ins>reachable via IPv6 rather than (or in addition to) IPv4</ins>.</em></summary>
 
 ---
 **Example:**
@@ -65,12 +65,34 @@ To get the most out of Shodan it's important to understand the search query synt
 	> `shodan search --limit 3 hostname:"example.com"`
 ---
 </details>
+<details>
 
+<summary><strong>ip:</strong> <em>Search for a <ins>specific IP address</ins>.</em></summary>
+
+---
+**Example:**
+- Browser Example:
+	> `ip:104.21.7.138`
+- Command Line Example:
+	> `shodan search --limit 3 ip:104.21.7.138`
+---
+</details>
+
+<details>
+
+<summary><strong>isp:</strong> <em>Search for hosts or devices <ins>based on their Internet Service Provider (ISP)</ins>.</em></summary>
+
+---
+**Example:**
+- Browser Example:
+	> `isp:"Amazon.com"`
+- Command Line Example:
+	> `shodan search --limit 3 isp:"Amazon.com"`
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `ip` | Search for a specific IP address. | `ip:104.21.7.138` | `shodan search --limit 3 ip:104.21.7.138` |
-| `isp` | Search for hosts or devices based on their Internet Service Provider (ISP). | `isp:"Amazon.com"` | `shodan search --limit 3 isp:"Amazon.com"` |
 | `net` | Search for hosts within a *specific IP network or range*, using *CIDR notation*. | `net:5.252.178.0/24` | `shodan search --limit 3 net:5.252.178.0/24` |
 | `org` | Search for hosts based on the *organization* that owns or is assigned the IP address. | `org:"Amazon.com"` | `shodan search --limit 3 org:"Amazon.com"` |
 | `port` | Find hosts that have a *specific network port open*. | `port:80,443` | `shodan search --limit 3 port:80,443` |
