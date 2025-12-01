@@ -151,13 +151,48 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `geo:47.06181007599137,28.868065103036265` | `shodan search --limit 3 geo:47.06181007599137,28.868065103036265` |
 ---
 </details>
+<details>
 
+<summary><strong>postal:</strong> <em>Search for hosts based on their <ins>postal code (ZIP code)</ins>.</em></summary>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `postal` | Search for hosts based on their *postal code (ZIP code)*. | `postal:75001` | `shodan search --limit 3 postal:75001` |
-| `region` | Search for hosts based on a *geographical region, state, or province*. | `region:"New York"` | `shodan search --limit 3 region:"New York"` |
-| `state` | Filter hosts based on the *state, province, or administrative region* associated with their IP address. It is similar to the region filter, though Shodan sometimes uses state for certain countries (like the U.S.) where “state” is the standard administrative unit. | `state:"New York"` | `shodan search --limit 3 state:"New York"` |
+---
+> ***NOTE***
+> - Works with **numeric and alphanumeric codes**.
+> - Accuracy depends on IP geolocation databases.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `postal:75001` | `shodan search --limit 3 postal:75001` |
+| `postal:"SW1A 1AA"` | `shodan search --limit 3 postal:"SW1A 1AA"` |
+---
+</details>
+<details>
+
+<summary><strong>region:</strong> <em>Search for hosts based on a <ins>geographical region, state, or province</ins>.</em></summary>
+
+---
+> ***NOTE***
+> Region names must match **Shodan’s internal geolocation database names**; check spelling carefully.
+> Works best for **large-area searches** where city-level granularity is not needed.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `region:California` | `shodan search --limit 3 region:California` |
+---
+</details>
+<details>
+
+<summary><strong>state:</strong> <em>Filter hosts based on the <ins>state, province, or administrative region</ins> associated with their IP address.</em></summary>
+
+---
+> ***NOTE***
+> - In Shodan, state and region are often interchangeable depending on the country, but some geolocations may only recognize one of the two.
+> - Works best for medium-scale geographic searches (larger than city, smaller than country).
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `state:Florida` | `shodan search --limit 3 state:Florida` |
+</details>
 
 ---
 ### Metadata
