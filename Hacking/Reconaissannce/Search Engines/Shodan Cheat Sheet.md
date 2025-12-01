@@ -205,7 +205,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 <details>
 
-<strong><em>Metadata</em></strong></summary>
+<summary><strong><em>Metadata</em></strong></summary>
 
 ---
 
