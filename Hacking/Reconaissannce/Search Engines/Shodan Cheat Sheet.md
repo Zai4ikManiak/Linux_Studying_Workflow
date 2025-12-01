@@ -13,7 +13,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <details> 
 
-<summary>***Network Search Filters***</summary>
+<summary><strong><em>Network Search Filters</em></strong></summary>
 
 <details>
 
