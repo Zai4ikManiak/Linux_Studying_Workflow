@@ -352,7 +352,35 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | Browser Example | Console Example |
 | :---: | :---: |
 | `has_screenshot:true` | `shodan search --limit 3 has_screenshot:true` |
+---
 </details>
+<details>
+
+<summary><strong>screenshot.hash:</strong> <em>Search for devices based on the <ins>perceptual hash (pHash)</ins> of their screenshot.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan computes a visual similarity hash of each screenshot it captures.
+> This lets you search for screenshots that look similar, not necessarily identical.
+>
+>
+> - You might use this to:
+>	- Find interfaces that share the same layout or branding.
+>	- Group visually similar login pages.
+>	- Locate other devices with the same dashboard UI.
+>	- Identify clusters of similar services across the internet
+>
+> - The hash is **not a cryptographic hash** like MD5 or SHA—it's a **perceptual hash** used for similarity detection.
+> - You cannot generate these hashes yourself with Shodan; you use ones that **Shodan already provides in search results**.
+> - Often used during **research**, **asset discovery**, or **visual grouping** of public-facing interfaces.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `screenshot.hash:123456789` | `shodan search --limit 3 screenshot.hash:123456789` |
+---
+</details>
+
 
 | `screenshot.hash` | Find devices whose visual appearance (as captured in Shodan’s automatic screenshots) matches a specific image hash. | `screenshot.hash:1437554350` | `shodan search --limit 3 screenshot.hash:1437554350` |
 | `screenshot.label` | Is used to filter devices or hosts based on labels detected in their screenshots. | `screenshot.label:ics` | `shodan search --limit 3 screenshot.label:ics` |
