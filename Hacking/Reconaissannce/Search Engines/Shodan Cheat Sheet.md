@@ -9,13 +9,11 @@ IT gathers information about all devices directly connected to the Internet. If 
 
 To get the most out of Shodan it's important to understand the search query syntax. Below are the Cheat Sheets used for different categories:
 
-<details>
-
-<summary>General Search</summary>
-
 ---
 
-### Network Search Filters
+<details> 
+
+<summary>***Network Search Filters***</summary>
 
 <details>
 
@@ -98,7 +96,9 @@ To get the most out of Shodan it's important to understand the search query synt
 | `port:80,443` | `shodan search --limit 3 port:80,443` |
 </details>
 
+</details>
 ---
+
 
 ### Location
 
