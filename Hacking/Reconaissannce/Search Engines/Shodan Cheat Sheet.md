@@ -139,7 +139,8 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
-> geo:\<latitude>,\<longitude>,\<radius>.
+>
+> <ins>geo:\<latitude>,\<longitude>,\<radius>.</ins>
 >
 > - Latitude and longitude can be positive or negative.
 > - The radius is measured in **kilometers**.
