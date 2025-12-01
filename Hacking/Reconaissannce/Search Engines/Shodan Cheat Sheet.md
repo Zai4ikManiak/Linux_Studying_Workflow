@@ -112,6 +112,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 ---
 > ***NOTE***
+>
 > - City names with spaces must be wrapped in quotes.
 > - Geolocation is based on IP-to-location databases, so accuracy depends on the provider.
 
@@ -128,6 +129,7 @@ To get the most out of Shodan it's important to understand the search query synt
 The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not the country’s full name.
 
 > ***NOTE***
+>
 > - Always use two-letter country codes.
 > - Geolocation is based on IP databases and may not be 100% accurate.
 > - Works well when narrowing down large, broad searches.
@@ -161,6 +163,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
+>
 > - Works with **numeric and alphanumeric codes**.
 > - Accuracy depends on IP geolocation databases.
 
@@ -176,6 +179,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
+>
 > Region names must match **Shodan’s internal geolocation database names**; check spelling carefully.
 > Works best for **large-area searches** where city-level granularity is not needed.
 
@@ -190,6 +194,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
+>
 > - In Shodan, state and region are often interchangeable depending on the country, but some geolocations may only recognize one of the two.
 > - Works best for medium-scale geographic searches (larger than city, smaller than country).
 
