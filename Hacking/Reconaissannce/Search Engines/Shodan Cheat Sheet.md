@@ -118,7 +118,7 @@ To get the most out of Shodan it's important to understand the search query synt
 
 The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not the country’s full name.
 
-> [!TIP]
+>[!TIP]
 > - Always use two-letter country codes.
 > - Geolocation is based on IP databases and may not be 100% accurate.
 > - Works well when narrowing down large, broad searches.
