@@ -232,6 +232,37 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `cpe:cpe:/o:canonical:ubuntu_linux:20.04` | `shodan search --limit 3 cpe:cpe:/o:canonical:ubuntu_linux:20.04` |
 ---
 </details>
+<details>
+
+<summary><strong>device:</strong> <em>Search for internet‑connected systems based on <ins>the device type Shodan has identified</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> <ins>device:\<device_type></ins>
+>
+> | device_type | What it returns |
+> | :-- | :-- |
+> | `webcam` | Devices recognized as webcams or IP cameras. |
+> | `router` | Network routers detected by Shodan. |
+> | `firewall` | Firewalls or security appliances. |
+> | `pbx` | VoIP PBX systems. |
+> | `scada` | Industrial control systems (ICS/SCADA). |
+> | `printer` | Network‑connected printers. |
+> | `nvr` | Network video recorders. |
+>
+> - The **device types are not user‑defined**; they come from Shodan’s classification engine.
+> - Accuracy depends on **banner information** and **fingerprints**.
+> - `device:` is different from `product:`
+>	- `device:` broad category (router, webcam, etc.)
+>	- `product:` specific software or firmware (e.g., Apache, OpenSSH).
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `device:printer` | `shodan search --limit 3 device:printer` |
+---
+</details>
+
 
 
 | Name | Description | Browser Example | Console Example |
