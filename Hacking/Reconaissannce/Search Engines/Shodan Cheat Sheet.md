@@ -262,14 +262,54 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `device:printer` | `shodan search --limit 3 device:printer` |
 ---
 </details>
+<details>
+
+<summary><strong>hash:</strong> <em>Search for specific files on the internet <ins>using their cryptographic hash</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan can index files exposed through web servers, FTP, SMB, and other services, and you can use this filter to locate a file by its **MD5**, **SHA-1**, or **SHA-256 hash**.
+>
+> - Useful for **malware research, identifying leaked files, or verifying file integrity** across public servers.
+> - Only **files indexed by Shodan** can be searched with this filter.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `hash:5d41402abc4b2a76b9719d911017c592` | `shodan search --limit 3 hash:5d41402abc4b2a76b9719d911017c592` |
+---
+</details>
+<details>
+
+<summary><strong>os:</strong> <em>Search for devices based on their <ins>operating system</ins>.</em></summary>
+
+---
+> ***NOTE***
+> - OS detection is **not always 100% accurate**; it relies on banner information and fingerprinting.
+> - The search is **case-insensitive**.
+> - Useful for network reconnaissance, security research, and vulnerability assessment.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `os:"Windows 10"` | `shodan search --limit 3 os:"Windows 10"` |
+| `os:linux` | `shodan search --limit 3 os:linux` |
+---
+</details>
+<details>
+
+<summary><strong>product:</strong> <em>Search for devices or servers <ins>based on the software they run</ins>, rather than their hardware type.</em></summary>
+
+---
+> ***NOTE***
+> 
+
+| Browser Example | Console Example |
+| :---: | :---: |
+|
+---
+</details>
 
 
-
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `device` | Restricts search results to systems that Shodan has identified as a particular *kind of device*. | `device:voip` | `shodan search --limit 3 device:voip` |
-| `hash` | Used to locate files, firmware, or data that match a specific cryptographic hash. | `hash:"d41d8cd98f00b204e9800998ecf8427e"` | `shodan search --limit 3 hash:"d41d8cd98f00b204e9800998ecf8427e"` |
-| `os` | Search for hosts based on their *operating system*. | `os:"Windows 7"` | `shodan search --limit 3 os:"Windows 7` |
 | `product` | Find hosts running a *specific software product, service, or application*. | `product:Redis` | `shodan search --limit 3 product:Redis` |
 | `version` | find hosts running a *specific version of a software product or service*. | `version:"2.4.49"` | `shodan search --limit 3 version:"2.4.49"` |
 
