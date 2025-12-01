@@ -197,9 +197,33 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 ---
 ### Metadata
 
+<details>
+
+<summary><strong>cpe:</strong> <em>Search for devices or services based on their <ins>Common Platform Enumeration (CPE) identifier</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> CPE is a standardized way to name software, hardware, and operating systems, often used for vulnerability tracking (e.g., CVEs). This filter is extremely precise for identifying specific software versions or platforms across the internet.
+>
+> - **CPE format**: `cpe:/<part>:<vendor>:<product>:<version>:<update>:<edition>`
+>	- `part` = `a`(application), `o`(operating system), `h`(hardware)
+>	- `vendor` = software or hardware vendor
+>	- `product` = product name
+>	- `version` = version number
+>	- The remaining fields (`update`, `edition`) are optional)
+>
+> - Extremely useful for vulnerability research or tracking specific software deployments.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `cpe:cpe:/o:canonical:ubuntu_linux:20.04` | `shodan search --limit 3 cpe:cpe:/o:canonical:ubuntu_linux:20.04` |
+---
+</details>
+
+
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `cpe` | Filters Shodan results to devices that report a specific software/hardware platform. | `cpe:"cpe:2.3:o:microsoft:windows_10"` | `shodan search --limit 3 cpe:"cpe:2.3:o:microsoft:windows_10"` |
 | `device` | Restricts search results to systems that Shodan has identified as a particular *kind of device*. | `device:voip` | `shodan search --limit 3 device:voip` |
 | `hash` | Used to locate files, firmware, or data that match a specific cryptographic hash. | `hash:"d41d8cd98f00b204e9800998ecf8427e"` | `shodan search --limit 3 hash:"d41d8cd98f00b204e9800998ecf8427e"` |
 | `os` | Search for hosts based on their *operating system*. | `os:"Windows 7"` | `shodan search --limit 3 os:"Windows 7` |
