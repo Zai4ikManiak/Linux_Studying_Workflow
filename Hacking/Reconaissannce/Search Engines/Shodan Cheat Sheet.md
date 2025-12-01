@@ -95,10 +95,8 @@ To get the most out of Shodan it's important to understand the search query synt
 | :---: | :---: |
 | `port:80,443` | `shodan search --limit 3 port:80,443` |
 </details>
-
-</details>
 ---
-
+</details>
 
 ### Location
 
