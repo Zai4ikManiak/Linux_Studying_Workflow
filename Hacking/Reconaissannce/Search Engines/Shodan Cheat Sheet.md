@@ -285,6 +285,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
+>
 > - OS detection is **not always 100% accurate**; it relies on banner information and fingerprinting.
 > - The search is **case-insensitive**.
 > - Useful for network reconnaissance, security research, and vulnerability assessment.
@@ -301,17 +302,28 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 > ***NOTE***
-> 
+>
+> Unlike `device:`, which identifies hardware categories, `product:` focuses on **specific software or services**.
+> Useful for **finding specific technologies across the internet**, rather than broad device categories. 
 
 | Browser Example | Console Example |
 | :---: | :---: |
-|
+| `product:OpenSSH` | `shodan search --limit 3 product:OpenSSH` |
 ---
 </details>
+<details>
 
+<summary><strong>version:</strong> <em>Search for <ins>specific versions of software</ins> or products</em></summary>
 
-| `product` | Find hosts running a *specific software product, service, or application*. | `product:Redis` | `shodan search --limit 3 product:Redis` |
-| `version` | find hosts running a *specific version of a software product or service*. | `version:"2.4.49"` | `shodan search --limit 3 version:"2.4.49"` |
+---
+> ***NOTE***
+>
+> - Is most effective when you know the exact version string Shodan reports.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `version:1.18 product:nginx` | `shodan search --limit 3 version:1.18 product:nginx` |
+</details>
 
 ---
 </details>
