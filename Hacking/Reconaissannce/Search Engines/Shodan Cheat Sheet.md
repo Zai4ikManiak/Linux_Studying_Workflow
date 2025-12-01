@@ -230,22 +230,6 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `product` | Find hosts running a *specific software product, service, or application*. | `product:Redis` | `shodan search --limit 3 product:Redis` |
 | `version` | find hosts running a *specific version of a software product or service*. | `version:"2.4.49"` | `shodan search --limit 3 version:"2.4.49"` |
 
-| Common device types |
-| :--: |
-| `router` |
-| `webcam` |
-| `switch` |
-| `firewall` |
-| `pbx` |
-| `storage` |
-| `printer` |
-| `ics` |
-| `voip` |
-| `nas` |
-| `vpn` |
-
-</details>
-
 <details>
 
 <summary>Screenshots</summary>
