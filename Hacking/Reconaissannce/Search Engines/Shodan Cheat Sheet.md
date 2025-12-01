@@ -116,14 +116,14 @@ To get the most out of Shodan it's important to understand the search query synt
 
 <summary><strong>country:</strong> <em>search results to devices located in a <ins>specific country</ins>.</em></summary>
 
+---
 The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not the country’s full name.
 
-	> [!NOTE]
-	> - Always use two-letter country codes.
-	> - Geolocation is based on IP databases and may not be 100% accurate.
-	> - Works well when narrowing down large, broad searches.
+> [!NOTE]
+> - Always use two-letter country codes.
+> - Geolocation is based on IP databases and may not be 100% accurate.
+> - Works well when narrowing down large, broad searches.
 
----
 | Browser Example | Console Example |
 | :---: | :---: |
 | `country:US` | `shodan search --limit 3 country:US` |
