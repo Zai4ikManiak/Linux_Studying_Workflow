@@ -107,6 +107,10 @@ To get the most out of Shodan it's important to understand the search query synt
 <summary><strong>city:</strong> <em>Search results to devices located in a <ins>specific city</ins>.</em></summary>
 
 ---
+> ***NOTE***
+> - City names with spaces must be wrapped in quotes.
+> - Geolocation is based on IP-to-location databases, so accuracy depends on the provider.
+
 | Browser Example | Console Example |
 | :---: | :---: |
 | `city:"New York"` | `shodan search --limit 3 city:"New York"` |
@@ -114,7 +118,7 @@ To get the most out of Shodan it's important to understand the search query synt
 </details>
 <details>
 
-<summary><strong>country:</strong> <em>search results to devices located in a <ins>specific country</ins>.</em></summary>
+<summary><strong>country:</strong> <em>Search results to devices located in a <ins>specific country</ins>.</em></summary>
 
 ---
 The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not the country’s full name.
@@ -131,19 +135,25 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 </details>
 <details>
 
-<summary><strong>country:</strong> <em>search results to devices located in a <ins>specific country</ins>.</em></summary>
+<summary><strong>geo:</strong> <em>Searches for devices based on <ins>geographical coordinates</ins> (latitude and longitude) with an optional radius in kilometers.</em></summary>
 
 ---
+> ***NOTE***
+> geo:\<latitude>,\<longitude>,\<radius>.
+>
+> - Latitude and longitude can be positive or negative.
+> - The radius is measured in **kilometers**.
+> - Without a radius, Shodan uses a very small default radius around the point.
+
 | Browser Example | Console Example |
 | :---: | :---: |
-| `country:US` | `shodan search --limit 3 country:US` |
+| `geo:47.06181007599137,28.868065103036265` | `shodan search --limit 3 geo:47.06181007599137,28.868065103036265` |
 ---
 </details>
 
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `geo` | Restricts results to hosts located within a radius of a given latitude/longitude point. `geo:<latitude>,<longitude>,<radius_in_km>` | `geo:47.06181007599137,28.868065103036265` | `shodan search --limit 3 geo:47.06181007599137,28.868065103036265` |
 | `postal` | Search for hosts based on their *postal code (ZIP code)*. | `postal:75001` | `shodan search --limit 3 postal:75001` |
 | `region` | Search for hosts based on a *geographical region, state, or province*. | `region:"New York"` | `shodan search --limit 3 region:"New York"` |
 | `state` | Filter hosts based on the *state, province, or administrative region* associated with their IP address. It is similar to the region filter, though Shodan sometimes uses state for certain countries (like the U.S.) where “state” is the standard administrative unit. | `state:"New York"` | `shodan search --limit 3 state:"New York"` |
