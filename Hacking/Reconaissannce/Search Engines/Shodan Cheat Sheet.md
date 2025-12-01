@@ -318,7 +318,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 </details>
 <details>
 
-<summary><strong>version:</strong> <em>Search for <ins>specific versions of software</ins> or products</em></summary>
+<summary><strong>version:</strong> <em>Search for <ins>specific versions of software</ins> or products.</em></summary>
 
 ---
 > ***NOTE***
@@ -335,14 +335,28 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 <details>
 
-<summary>Screenshots</summary>
+<summary><strong><em>Screenshots</em></strong></summary>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `has_screenshot` | Limit results to hosts for which Shodan has captured a *web interface screenshot*. | `has_screenshot:true` | `shodan search --limit 3 has_screenshot:true` |
+---
+
+<details>
+
+<summary><strong>has_screenshot:</strong> <em>Limit results to hosts for which Shodan has captured a <ins>web interface screenshot</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> - Screenshots are often associated with **web interfaces** (port 80/443/8080) or **RDP interfaces**.
+> - This filter is extremely useful for **visual browsing**, particularly during **research**, **auditing**, or **OSINT** work.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `has_screenshot:true` | `shodan search --limit 3 has_screenshot:true` |
+</details>
+
 | `screenshot.hash` | Find devices whose visual appearance (as captured in Shodan’s automatic screenshots) matches a specific image hash. | `screenshot.hash:1437554350` | `shodan search --limit 3 screenshot.hash:1437554350` |
 | `screenshot.label` | Is used to filter devices or hosts based on labels detected in their screenshots. | `screenshot.label:ics` | `shodan search --limit 3 screenshot.label:ics` |
-
+---
 </details>
 
 <details>
