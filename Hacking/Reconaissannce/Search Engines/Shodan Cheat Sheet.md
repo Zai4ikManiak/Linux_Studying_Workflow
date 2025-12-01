@@ -102,10 +102,47 @@ To get the most out of Shodan it's important to understand the search query synt
 
 ### Location
 
+<details>
+
+<summary><strong>city:</strong> <em>Search results to devices located in a <ins>specific city</ins>.</em></summary>
+
+---
+| Browser Example | Console Example |
+| :---: | :---: |
+| `city:"New York"` | `shodan search --limit 3 city:"New York"` |
+---
+</details>
+<details>
+
+<summary><strong>country:</strong> <em>search results to devices located in a <ins>specific country</ins>.</em></summary>
+
+The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not the country’s full name.
+
+> [!TIP]
+> - Always use two-letter country codes.
+> - Geolocation is based on IP databases and may not be 100% accurate.
+> - Works well when narrowing down large, broad searches.
+
+---
+| Browser Example | Console Example |
+| :---: | :---: |
+| `country:US` | `shodan search --limit 3 country:US` |
+---
+</details>
+<details>
+
+<summary><strong>country:</strong> <em>search results to devices located in a <ins>specific country</ins>.</em></summary>
+
+---
+| Browser Example | Console Example |
+| :---: | :---: |
+| `country:US` | `shodan search --limit 3 country:US` |
+---
+</details>
+
+
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `city` | Returns only hosts that Shodan has geolocated to the specified city. | `city:"New York"` | `shodan search --limit 3 city:"New York"` |
-| `country` | Restricts search results to hosts that Shodan identifies as being in the specified country, using the *two-letter ISO country code*. | `country:US` | `shodan search --limit 3 country:US` |
 | `geo` | Restricts results to hosts located within a radius of a given latitude/longitude point. `geo:<latitude>,<longitude>,<radius_in_km>` | `geo:47.06181007599137,28.868065103036265` | `shodan search --limit 3 geo:47.06181007599137,28.868065103036265` |
 | `postal` | Search for hosts based on their *postal code (ZIP code)*. | `postal:75001` | `shodan search --limit 3 postal:75001` |
 | `region` | Search for hosts based on a *geographical region, state, or province*. | `region:"New York"` | `shodan search --limit 3 region:"New York"` |
