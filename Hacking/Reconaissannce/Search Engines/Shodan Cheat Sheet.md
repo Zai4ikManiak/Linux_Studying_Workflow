@@ -100,7 +100,11 @@ To get the most out of Shodan it's important to understand the search query synt
 ---
 </details>
 
-### Location
+<details>
+
+<summary><strong><em>Location</em></strong></summary>
+
+---
 
 <details>
 
@@ -195,6 +199,8 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 </details>
 
 ---
+
+</details>
 ### Metadata
 
 <details>
