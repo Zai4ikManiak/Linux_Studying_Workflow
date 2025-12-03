@@ -517,11 +517,11 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 >
 > | Common Component Names | |
 > | :-- | :-- |
-> | CMS | - wordpress<br> - joomla<br> - drupal<br> - ghost |
-> | Frameworks | - laravel<br> - django<br> - express<br> - rails<br> - spring |
-> | JavaScript libraries | - jquery<br> - angular<br> - react<br> - vue |
-> | E-commerce | - magento<br> - woocommerce<br> - shopify |
-> | Misc | - socket.io<br> - bootstrap<br> - cloudflare<br> - matomo |
+> | CMS | - `wordpress`<br> - `joomla`<br> - `drupal`<br> - `ghost` |
+> | Frameworks | - `laravel`<br> - `django`<br> - `express`<br> - `rails`<br> - `spring` |
+> | JavaScript libraries | - `jquery`<br> - `angular`<br> - `react`<br> - `vue` |
+> | E-commerce | - `magento`<br> - `woocommerce`<br> - `shopify` |
+> | Misc | - `socket.io`<br> - `bootstrap`<br> - `cloudflare`<br> - `matomo` |
 
 | Browser Example | Console Example |
 | :---: | :---: |
@@ -554,11 +554,26 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.component_category:analytics` | `shodan search --limit 3 http.component_category:analytics` |
 ---
 </details>
+<details>
+
+<summary><strong>http.dom_hash:</strong> <em>Search for hosts whose <ins>DOM (Document Object Model) content matches a specific hash</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan renders the HTML of a web page, builds its DOM, and then computes a hash of that structure.
+> You can then use this hash to find identical or nearly identical web pages across the internet.
+>
+> - This is heavily used in threat hunting, phishing detection, and OSINT.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.dom_hash:1239617585` | `shodan search --limit 3 http.dom_hash:1239617585` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.component_category` | Search for web servers based on the category of web technologies detected in their HTTP responses. | `http.component_category:"wordpress"` | `shodan search --limit 3 http.component_category:"wordpress"` |
-| `http.dom_hash` | search for web servers based on the *hash of their HTML DOM (Document Object Model)*. This is useful for detecting *identical or very similar web pages*, even if other metadata like headers or IPs differ. | `http.dom_hash:"abcd1234efgh5678"` | `shodan search --limit 3 http.dom_hash:"abcd1234efgh5678"` |
 | `http.favicon.hash` | Search for web servers based on the hash of their favicon. | `http.favicon.hash:1234567890` | `shodan search --limit 3 http.favicon.hash:1234567890` |
 | `http.headers_hash` | Search for web servers based on a *hash of their HTTP headers*. Instead of looking at the content of the web page or favicon, this filter focuses on the structure and values of the HTTP headers returned by the server. | `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
 | `http.html` | Search for web servers by looking for *specific text inside the raw HTML body* of their HTTP responses. | `http.html:"Admin Login"` | `shodan search --limit 3 http.html:"Admin Login"` |
