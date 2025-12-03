@@ -619,6 +619,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 > Shodan takes all the HTTP headers received from a service, normalizes them, then generates a 32-bit hash. You can use this hash to find other systems with identical header structures, which is extremely useful for fingerprinting technologies and infrastructure.
 >
 > | What this filter Does? | |
+> | :-- | :-- |
 > | It filters hosts by the exact same set of HTTP headers, including: | - Header names<br> - Header ordering<br> - Header values (in normalized form) |
 > | This can reveal: | - Same software stack<br> - Same server configuration<br> - Same reverse proxy setup<br> - Same CDN configuration<br> - Identical phishing or malware pages<br> - The same WAF or load balancer<br> - Shared hosting templates |
 
