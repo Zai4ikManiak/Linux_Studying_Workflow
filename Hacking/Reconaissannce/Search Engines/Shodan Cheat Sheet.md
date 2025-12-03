@@ -504,11 +504,58 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 <details>
 
-<summary>HTTP</summary>
+<summary><strong><em>HTTP</em></strong></summary>
+
+---
+
+<details>
+
+<summary><strong>http.component:</strong> <em>Search for devices based on <ins>web technologies detected in their HTTP responses</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> **Common Component Names**
+>
+> <ins>CMS</ins>
+> - wordpress
+> - joomla
+> - drupal
+> - ghost
+>
+> <ins>Frameworks</ins>
+> - laravel
+> - django
+> - express
+> - rails
+> - spring
+>
+> <ins>JavaScript libraries</ins>
+> - jquery
+> - angular
+> - react
+> - vue
+>
+> <ins>E-commerce</ins>
+> - magento
+> - woocommerce
+> - shopify
+>
+> <ins>Misc</ins>
+> - socket.io
+> - bootstrap
+> - cloudflare
+> - matomo
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.component:wordpress` | `shodan search --limit 3 http.component:wordpress` |
+---
+</details>
+
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.component` | Search for web servers whose *HTML content, scripts, assets, or metadata indicate they are using a specific software component*. | `http.component:"wordpress"` | `shodan search --limit 3 http.component:"wordpress"` |
 | `http.component_category` | Search for web servers based on the category of web technologies detected in their HTTP responses. | `http.component_category:"wordpress"` | `shodan search --limit 3 http.component_category:"wordpress"` |
 | `http.dom_hash` | search for web servers based on the *hash of their HTML DOM (Document Object Model)*. This is useful for detecting *identical or very similar web pages*, even if other metadata like headers or IPs differ. | `http.dom_hash:"abcd1234efgh5678"` | `shodan search --limit 3 http.dom_hash:"abcd1234efgh5678"` |
 | `http.favicon.hash` | Search for web servers based on the hash of their favicon. | `http.favicon.hash:1234567890` | `shodan search --limit 3 http.favicon.hash:1234567890` |
