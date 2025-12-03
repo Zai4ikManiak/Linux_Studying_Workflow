@@ -499,6 +499,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `cloud.service:ec2` | `shodan search --limit 3 cloud.service:ec2` |
 ---
 </details>
+
 ---
 </details>
 
