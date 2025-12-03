@@ -440,10 +440,44 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `cloud.provider:amazon` | `shodan search --limit 3 cloud.provider:amazon` |
 ---
 </details>
+<details>
+
+<summary><strong>cloud.region:</strong> <em>Search filter that lets you limit results to systems hosted in a <ins>specific region of a cloud provider</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan identifies the region based on the cloud provider’s internal IP allocations and metadata.
+> Region names match the provider’s naming conventions.
+>
+> Examples of Region Names by Provider
+> - AWS
+>	- `us-east-1`
+>	- `us-west-2`
+>	- `eu-central-1`
+>	- `ap-southeast-1`
+>
+> - Azure
+>	- `westeurope`
+>	- `eastus`
+>	- `northeurope`
+>	- `japaneast`
+>
+> - Google Cloud
+>	- `us-central1`
+>	- `europe-west4`
+>	- `asia-south1`
+>
+> Not all providers have region-level mapping in Shodan, but many major ones do.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `cloud.region:us-east-1` | `shodan search --limit 3 cloud.region:us-east-1` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `cloud.region` | Used to search for hosts that are located in a specific geographic region within a cloud provider’s infrastructure. | `cloud.region:"us-east-1"` | `shodan search --limit 3 cloud.region:"us-east-1"` |
 | `cloud.service` | Search for hosts that Shodan has identified as running on a *specific cloud service offering*, such as a managed service or infrastructure product provided by a cloud vendor. | `cloud.service:"Cloudflare"` | `shodan search --limit 3 cloud.service:"Cloudflare"` |
 
 </details>
