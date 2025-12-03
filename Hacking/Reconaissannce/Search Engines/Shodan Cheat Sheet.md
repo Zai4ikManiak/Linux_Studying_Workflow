@@ -413,11 +413,36 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 <details>
 
-<summary>Cloud</summary>
+<summary><strong><em>Cloud</em></strong></summary>
+
+---
+
+<details>
+
+<summary><strong>cloud.provider:</strong> <em>Search for devices, services, or hosts that Shodan has identified as running on a specific <ins>cloud provider’s infrastructure</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Below are typical values you can use (not exhaustive):
+> | Provider | Value |
+> | :-- | :-- |
+> | Amazon Web Services | `amazon` |
+> | Microsoft Azure | `microsoft` |
+> | Google Cloud Platform | `google` |
+> | Alibaba Cloud | `alicloud` |
+> ...
+> Shodan may recognize additional regional or specialized cloud providers as well.
+>
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `cloud.provider:amazon` | `shodan search --limit 3 cloud.provider:amazon` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `cloud.provider` | Used to search for devices, services, or hosts that are running on a specific cloud provider. | `cloud.provider:"Amazon"` | `shodan search --limit 3 cloud.provider:"Amazon"` |
 | `cloud.region` | Used to search for hosts that are located in a specific geographic region within a cloud provider’s infrastructure. | `cloud.region:"us-east-1"` | `shodan search --limit 3 cloud.region:"us-east-1"` |
 | `cloud.service` | Search for hosts that Shodan has identified as running on a *specific cloud service offering*, such as a managed service or infrastructure product provided by a cloud vendor. | `cloud.service:"Cloudflare"` | `shodan search --limit 3 cloud.service:"Cloudflare"` |
 
