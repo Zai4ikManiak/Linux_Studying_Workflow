@@ -671,10 +671,30 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.html_hash:551003356` | `shodan search --limit 3 http.html_hash:551003356` |
 ---
 </details>
+<details>
+
+<summary><strong>http.robots_hash:</strong> <em>Search hosts based on the <ins>hash of their robots.txt file</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> It filters hosts by the exact same robots.txt content, making it useful for identifying:
+> - Sites running on the same framework or CMS
+> - Mass‑deployed SaaS platforms
+> - Shared hosting templates
+> - Botnet/phishing servers reusing identical robots files
+> - Infrastructure belonging to the same organization
+> - Misconfigured auto-generated robots files
+> - Malware or C2 servers that block all crawlers in the same way
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.robots_hash:551003356` | `shodan search --limit 3 http.robots_hash:551003356` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.robots_hash` | Search for web servers based on a *hash of their robots.txt file*. | `http.robots_hash:abcdef1234567890` | `shodan search --limit 3 http.robots_hash:abcdef1234567890` |
 | `http.securitytxt` | Used to search for web servers that *host a security.txt file* and optionally match specific text inside it. | `http.securitytxt:"security@example.com"` | `shodan search --limit 3 http.securitytxt:"security@example.com"` |
 | `http.server_hash` | Used to search for web servers based on a *hash of the Server HTTP header*. | `http.server_hash:547046460` | `shodan search --limit 3 http.server_hash:547046460` |
 | `http.status` | Search for web servers based on the HTTP status code they return in response to Shodan’s crawl request. | `http.status:403` | `shodan search --limit 3 http.status:403` |
