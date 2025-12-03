@@ -604,16 +604,33 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 > - DNS changes
 > - title changes
 
-
 | Browser Example | Console Example |
 | :---: | :---: |
 | `http.favicon.hash:551003356` | `shodan search --limit 3 http.favicon.hash:551003356` |
 ---
 </details>
+<details>
+
+<summary><strong>http.headers_hash:</strong> <em>Search for hosts based on the <ins>hash of their HTTP response headers</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan takes all the HTTP headers received from a service, normalizes them, then generates a 32-bit hash. You can use this hash to find other systems with identical header structures, which is extremely useful for fingerprinting technologies and infrastructure.
+>
+> | What this filter Does? | |
+> | It filters hosts by the exact same set of HTTP headers, including: | - Header names<br> - Header ordering<br> - Header values (in normalized form) |
+> | This can reveal: | - Same software stack<br> - Same server configuration<br> - Same reverse proxy setup<br> - Same CDN configuration<br> - Identical phishing or malware pages<br> - The same WAF or load balancer<br> - Shared hosting templates |
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
+---
+</details>
+
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.headers_hash` | Search for web servers based on a *hash of their HTTP headers*. Instead of looking at the content of the web page or favicon, this filter focuses on the structure and values of the HTTP headers returned by the server. | `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
 | `http.html` | Search for web servers by looking for *specific text inside the raw HTML body* of their HTTP responses. | `http.html:"Admin Login"` | `shodan search --limit 3 http.html:"Admin Login"` |
 | `http.html_hash` | Search for web servers based on a *hash of their HTML content*. Unlike http.html, which searches for literal text strings in the HTML, this filter identifies pages that are structurally identical by comparing the hash of the full HTML response. | `http.html_hash:1234567890abcdef` | `shodan search --limit 3 http.html_hash:1234567890abcdef` |
 | `http.robots_hash` | Search for web servers based on a *hash of their robots.txt file*. | `http.robots_hash:abcdef1234567890` | `shodan search --limit 3 http.robots_hash:abcdef1234567890` |
