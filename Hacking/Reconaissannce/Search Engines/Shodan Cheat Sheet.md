@@ -692,10 +692,33 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.robots_hash:551003356` | `shodan search --limit 3 http.robots_hash:551003356` |
 ---
 </details>
+<details>
+
+<summary><strong>http.securitytxt:</strong> <em>Search for hosts <ins>serving a /.well-known/security.txt file</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> It filters results based on the presence or content of a security.txt file served by a website. This file typically contains:
+> - Security contact email or URL
+> - Disclosure policy
+> - Encryption keys (PGP)
+> - Acknowledgments
+> - Hiring info (sometimes)
+>
+> Shodan downloads this file and lets you:
+> - Detect sites with a security.txt
+> - Optionally search for specific strings or patterns inside it
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.securitytxt:true` | `shodan search --limit 3 http.securitytxt:true` |
+| `http.securitytxt:"PGP"` | `shodan search --limit 3 http.securitytxt:"PGP"` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.securitytxt` | Used to search for web servers that *host a security.txt file* and optionally match specific text inside it. | `http.securitytxt:"security@example.com"` | `shodan search --limit 3 http.securitytxt:"security@example.com"` |
 | `http.server_hash` | Used to search for web servers based on a *hash of the Server HTTP header*. | `http.server_hash:547046460` | `shodan search --limit 3 http.server_hash:547046460` |
 | `http.status` | Search for web servers based on the HTTP status code they return in response to Shodan’s crawl request. | `http.status:403` | `shodan search --limit 3 http.status:403` |
 | `http.title` | Search for web servers based on the *text inside the <title> HTML* tag of their webpage. | `http.title:"Admin Login"` | `shodan search --limit 3 http.title:"Admin Login"` |
