@@ -477,7 +477,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 </details>
 <details>
 
-<summary><strong>cloud.service:</strong> <em>Search for hosts based on <ins>the specific cloud service</ins> they belong to—such as AWS EC2, Azure App Service, Google Cloud Storage, etc.</em></summary>
+<summary><strong>cloud.service:</strong> <em>Search for hosts based on <ins>the specific cloud service</ins> they belong to.</em></summary>
 
 ---
 > ***NOTE***
@@ -497,7 +497,6 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | Browser Example | Console Example |
 | :---: | :---: |
 | `cloud.service:ec2` | `shodan search --limit 3 cloud.service:ec2` |
----
 </details>
 
 ---
