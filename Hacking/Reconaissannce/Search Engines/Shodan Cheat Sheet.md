@@ -431,9 +431,9 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 > | Microsoft Azure | `microsoft` |
 > | Google Cloud Platform | `google` |
 > | Alibaba Cloud | `alicloud` |
+>
 > ...
 > Shodan may recognize additional regional or specialized cloud providers as well.
->
 
 | Browser Example | Console Example |
 | :---: | :---: |
