@@ -571,10 +571,48 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.dom_hash:1239617585` | `shodan search --limit 3 http.dom_hash:1239617585` |
 ---
 </details>
+<details>
+
+<summary><strong>http.favicon.hash:</strong> <em>Search filter that lets you find hosts by the <ins>hash of their website’s favicon.ico file</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan downloads the favicon from the HTTP service, computes a MurmurHash3 value of the Base64-encoded favicon, and stores it. You can then search for all hosts using the exact same favicon.
+>
+> This is one of the most powerful OSINT filters in Shodan.
+>
+> ---
+> **Why this filter is extremely powerful?**
+>
+> Favicons often uniquely identify
+> - Web applications
+> - Frameworks
+> - Routers / IoT admin pages
+> - Security camera dashboards
+> - VPN portals
+> - Firewalls
+> - Load balancers
+> - C2 servers
+> - Phishing pages
+> - SaaS login portals
+> - Internal tools accidentally exposed
+>
+> Even if:
+> - the URL changes
+> - HTML changes
+> - DNS changes
+> - title changes
+
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.favicon.hash:551003356` | `shodan search --limit 3 http.favicon.hash:551003356` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.favicon.hash` | Search for web servers based on the hash of their favicon. | `http.favicon.hash:1234567890` | `shodan search --limit 3 http.favicon.hash:1234567890` |
 | `http.headers_hash` | Search for web servers based on a *hash of their HTTP headers*. Instead of looking at the content of the web page or favicon, this filter focuses on the structure and values of the HTTP headers returned by the server. | `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
 | `http.html` | Search for web servers by looking for *specific text inside the raw HTML body* of their HTTP responses. | `http.html:"Admin Login"` | `shodan search --limit 3 http.html:"Admin Login"` |
 | `http.html_hash` | Search for web servers based on a *hash of their HTML content*. Unlike http.html, which searches for literal text strings in the HTML, this filter identifies pages that are structurally identical by comparing the hash of the full HTML response. | `http.html_hash:1234567890abcdef` | `shodan search --limit 3 http.html_hash:1234567890abcdef` |
