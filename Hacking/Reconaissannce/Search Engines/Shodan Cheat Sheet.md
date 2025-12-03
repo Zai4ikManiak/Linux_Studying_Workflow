@@ -475,11 +475,31 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `cloud.region:us-east-1` | `shodan search --limit 3 cloud.region:us-east-1` |
 ---
 </details>
+<details>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `cloud.service` | Search for hosts that Shodan has identified as running on a *specific cloud service offering*, such as a managed service or infrastructure product provided by a cloud vendor. | `cloud.service:"Cloudflare"` | `shodan search --limit 3 cloud.service:"Cloudflare"` |
+<summary><strong>cloud.service:</strong> <em>Search for hosts based on <ins>the specific cloud service</ins> they belong to—such as AWS EC2, Azure App Service, Google Cloud Storage, etc.</em></summary>
 
+---
+> ***NOTE***
+>
+> It limits your results to systems that Shodan has classified as using a particular <ins>cloud service type</ins>, not just a cloud provider overall.
+>
+> This allows you to target:
+> - Compute instances (EC2, Azure VM, GCP Compute Engine)
+> - Storage services (S3, Azure Blob Storage)
+> - Serverless platforms
+> - Managed databases
+> - Edge/CDN services
+> - Load balancers
+>
+> And more—depending on what Shodan is able to classify.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `cloud.service:ec2` | `shodan search --limit 3 cloud.service:ec2` |
+---
+</details>
+---
 </details>
 
 <details>
