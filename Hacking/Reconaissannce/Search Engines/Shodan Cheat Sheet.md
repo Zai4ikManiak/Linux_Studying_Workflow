@@ -628,6 +628,33 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.headers_hash:987654321` | `shodan search --limit 3 http.headers_hash:987654321` |
 ---
 </details>
+<details>
+
+<summary><strong>http.html:</strong> <em>Searches the <ins>raw HTML content</ins> of a webpage exactly as Shodan downloaded it.</em></summary>
+
+---
+> ***NOTE***
+>
+> This is one of the most flexible and powerful filters in Shodan because it searches inside the **raw HTML body** returned by the server, including:
+> - Visible text
+> - Hidden text
+> - Script tags
+> - Inline JavaScript
+> - Comments
+> - Meta tags
+> - HTML attributes
+> - Embedded URLs
+> - Error pages
+> - Login forms
+> - Any keyword or string inside the page
+>
+> If the text appears in the HTML source, you can find it.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.html:"/static/js/main.js"` | `shodan search --limit 3 http.html:"/static/js/main.js"` |
+---
+</details>
 
 
 | Name | Description | Browser Example | Console Example |
