@@ -518,30 +518,10 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 > | Common Component Names | |
 > | :-- | :-- |
 > | CMS | - wordpress<br> - joomla<br> - drupal<br> - ghost |
->
-> <ins>Frameworks</ins>
-> - laravel
-> - django
-> - express
-> - rails
-> - spring
->
-> <ins>JavaScript libraries</ins>
-> - jquery
-> - angular
-> - react
-> - vue
->
-> <ins>E-commerce</ins>
-> - magento
-> - woocommerce
-> - shopify
->
-> <ins>Misc</ins>
-> - socket.io
-> - bootstrap
-> - cloudflare
-> - matomo
+> | Frameworks | - laravel<br> - django<br> - express<br> - rails<br> - spring |
+> | JavaScript libraries | - jquery<br> - angular<br> - react<br> - vue |
+> | E-commerce | - magento<br> - woocommerce<br> - shopify |
+> | Misc | - socket.io<br> - bootstrap<br> - cloudflare<br> - matomo |
 
 | Browser Example | Console Example |
 | :---: | :---: |
