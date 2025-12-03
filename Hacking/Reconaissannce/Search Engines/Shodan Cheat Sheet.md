@@ -528,7 +528,32 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.component:wordpress` | `shodan search --limit 3 http.component:wordpress` |
 ---
 </details>
+<details>
 
+<summary><strong>http.component_category:</strong> <em>Search for web technologies by their <ins>category</ins> rather than a specific component name.</em></summary>
+
+---
+> ***NOTE***
+>
+> <ins>Common Shodan Component Categories</ins>
+> | Category | Meaning |
+> | :-- | :-- |
+> | `cms` | Content management systems (WordPress, Joomla, etc.) |
+> | `framework` | Backend frameworks (Django, Laravel, Rails…) |
+> | `javascript` | Front-end JS libraries (jQuery, Vue, React…) |
+> | `ecommerce` | Magento, WooCommerce, PrestaShop… |
+> | `analytics` | Google Analytics, Matomo, etc. |
+> | `security` | WAFs, security headers, Cloudflare tech |
+> | `server` | Web servers and modules |
+> | `cdn` | CDN-based components (Cloudflare, Akamai…) |
+> | `blog` | Blog engines |
+> | `marketing` | Marketing and tracking components |
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.component_category:analytics` | `shodan search --limit 3 http.component_category:analytics` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
