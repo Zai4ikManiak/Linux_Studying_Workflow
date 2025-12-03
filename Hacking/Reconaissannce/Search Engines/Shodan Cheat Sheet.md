@@ -655,12 +655,25 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.html:"/static/js/main.js"` | `shodan search --limit 3 http.html:"/static/js/main.js"` |
 ---
 </details>
+<details>
 
+<summary><strong>http.html_hash:</strong> <em>Search for hosts based on the <ins>hash of their raw HTML content</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> Shodan downloads the HTML from a webpage, takes the *raw HTML exactly as received*, and computes a *32‑bit MurmurHash3* value. You can then use this hash to find other sites serving *identical HTML pages*.
+>
+> If two sites output identical HTML, their `html_hash` will match.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.html_hash:551003356` | `shodan search --limit 3 http.html_hash:551003356` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.html` | Search for web servers by looking for *specific text inside the raw HTML body* of their HTTP responses. | `http.html:"Admin Login"` | `shodan search --limit 3 http.html:"Admin Login"` |
-| `http.html_hash` | Search for web servers based on a *hash of their HTML content*. Unlike http.html, which searches for literal text strings in the HTML, this filter identifies pages that are structurally identical by comparing the hash of the full HTML response. | `http.html_hash:1234567890abcdef` | `shodan search --limit 3 http.html_hash:1234567890abcdef` |
 | `http.robots_hash` | Search for web servers based on a *hash of their robots.txt file*. | `http.robots_hash:abcdef1234567890` | `shodan search --limit 3 http.robots_hash:abcdef1234567890` |
 | `http.securitytxt` | Used to search for web servers that *host a security.txt file* and optionally match specific text inside it. | `http.securitytxt:"security@example.com"` | `shodan search --limit 3 http.securitytxt:"security@example.com"` |
 | `http.server_hash` | Used to search for web servers based on a *hash of the Server HTTP header*. | `http.server_hash:547046460` | `shodan search --limit 3 http.server_hash:547046460` |
