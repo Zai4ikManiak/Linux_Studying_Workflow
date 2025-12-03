@@ -517,10 +517,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 >
 > | Common Component Names | |
 > | :-- | :-- |
-> | CMS | - wordpress |
-> | | - joomla |
-> | |  - drupal |
-> | | - ghost |
+> | CMS | - wordpress - joomla - drupal - ghost |
 >
 > <ins>Frameworks</ins>
 > - laravel
