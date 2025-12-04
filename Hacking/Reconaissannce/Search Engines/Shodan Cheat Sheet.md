@@ -758,10 +758,43 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.status:3*` | `shodan search --limit 3 http.status:3*` |
 ---
 </details>
+<details>
+
+<summary><strong>http.title:</strong> <em>searches Shodan for devices based on the <ins>HTML title tag</ins> returned in the HTTP response.</em></summary>
+
+---
+> ***NOTE***
+>
+> It’s one of the most powerful discovery filters because the `<title>` tag often reveals:
+> - Admin panels
+> - Login portals
+> - Web dashboards
+> - Brands and technologies
+> - IoT device interfaces
+> - Industrial control system (ICS) portals
+> - VPN gateways
+> - Firewalls
+> - Routers
+> - Databases
+> - Printers
+>
+> You can find sensitive systems simply by knowing their title.
+>
+> ---
+> - Case-insensitive
+> - Supports partial matches
+> - Supports wildcards (\*)
+> - Good for fingerprinting specific products or firmware versions
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.title:"phpmyadmin"` | `shodan search --limit 3 http.title:"phpmyadmin"` |
+| `http.title:"*admin"` | `shodan search --limit 3 http.title:"*admin"` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.title` | Search for web servers based on the *text inside the <title> HTML* tag of their webpage. | `http.title:"Admin Login"` | `shodan search --limit 3 http.title:"Admin Login"` |
 | `http.title_hash` | Search for web servers based on a *hash of the <title> tag* from their HTML response | `http.title_hash:123456789` | `shodan search --limit 3 http.title_hash:123456789` |
 | `http.waf` | Search for web servers where Shodan has detected the presence of a *Web Application Firewall (WAF)*. | `http.waf:"Cloudflare"` | `shodan search --limit 3 http.waf:"Cloudflare"` |
 
