@@ -716,11 +716,51 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.securitytxt:"PGP"` | `shodan search --limit 3 http.securitytxt:"PGP"` |
 ---
 </details>
+<details>
+
+<summary><strong>http.server_hash:</strong> <em>Search Shodan based on a <ins>hash of the HTTP Server header</ins> returned by a web service.</em></summary>
+
+---
+> ***NOTE***
+>
+> - Identify identical server banners across the internet
+> - Track outdated or vulnerable server versions
+> - Detect clones or mirrored infrastructure
+> - Find hidden servers with unusual banners
+> - Match obfuscated server headers
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `-1340961475` | `shodan search --limit 3 -1340961475` |
+---
+</details>
+<details>
+
+<summary><strong>http.status:</strong> <em>Searches for devices based on the </ins>HTTP response status code<ins> returned by the server.</em></summary>
+
+---
+> ***NOTE***
+>
+> It helps you find:
+> - Servers returning specific errors
+> - Login pages requiring authentication
+> - Misconfigured or broken systems
+> - Redirected services
+> - Hidden administration portals
+> - Forbidden resources (403)
+> - Vulnerable or unprotected endpoints
+>
+> Wildcards (\*) are allowed for ranges.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.status:200` | `shodan search --limit 3 http.status:200` |
+| `http.status:3*` | `shodan search --limit 3 http.status:3*` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `http.server_hash` | Used to search for web servers based on a *hash of the Server HTTP header*. | `http.server_hash:547046460` | `shodan search --limit 3 http.server_hash:547046460` |
-| `http.status` | Search for web servers based on the HTTP status code they return in response to Shodan’s crawl request. | `http.status:403` | `shodan search --limit 3 http.status:403` |
 | `http.title` | Search for web servers based on the *text inside the <title> HTML* tag of their webpage. | `http.title:"Admin Login"` | `shodan search --limit 3 http.title:"Admin Login"` |
 | `http.title_hash` | Search for web servers based on a *hash of the <title> tag* from their HTML response | `http.title_hash:123456789` | `shodan search --limit 3 http.title_hash:123456789` |
 | `http.waf` | Search for web servers where Shodan has detected the presence of a *Web Application Firewall (WAF)*. | `http.waf:"Cloudflare"` | `shodan search --limit 3 http.waf:"Cloudflare"` |
