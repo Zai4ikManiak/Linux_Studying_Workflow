@@ -792,12 +792,53 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `http.title:"*admin"` | `shodan search --limit 3 http.title:"*admin"` |
 ---
 </details>
+<details>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `http.title_hash` | Search for web servers based on a *hash of the <title> tag* from their HTML response | `http.title_hash:123456789` | `shodan search --limit 3 http.title_hash:123456789` |
-| `http.waf` | Search for web servers where Shodan has detected the presence of a *Web Application Firewall (WAF)*. | `http.waf:"Cloudflare"` | `shodan search --limit 3 http.waf:"Cloudflare"` |
+<summary><strong>http.title_hash:</strong> <em>Searches for devices based on a <ins>hash of the HTML title tag</ins>.</em></summary>
 
+---
+> ***NOTE***
+>
+> Then Shodan generates a numeric hash of the title string and stores it.
+> This allows fast, exact matching of identical page titles across the entire internet.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `http.title_hash:-1525564940` | `shodan search --limit 3 http.title_hash:-1525564940` |
+---
+</details>
+<details>
+
+<summary><strong>http.waf:</strong> <em>Search for devices or websites where Shodan has detected a <ins>Web Application Firewall (WAF)</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> A WAF is a security layer that filters HTTP traffic and blocks malicious requests.
+>
+> This filter is helpful when you want to:
+> - Identify whether a website is protected by a WAF
+> - Find technologies used for security
+> - Detect sites that lack WAF protection (by excluding results)
+> - Enumerate attack surfaces (pentesting, research, OSINT)
+> - Study WAF deployments globally
+>
+> ---
+> - Shodan uses fingerprinting techniques similar to WAFW00F.
+> - Not all WAFs can be detected.
+> - If no WAF is detected, the field is simply missing.
+> - Values may vary depending on signatures Shodan recognizes.
+
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `-http.waf:*` | `shodan search --limit 3 -http.waf:*` |
+| `http.waf:*` | `shodan search --limit 3 http.waf:*` |
+| `http.waf:cloudflare` | `shodan search --limit 3 http.waf:cloudflare` |
+
+</details>
+
+---
 </details>
 
 <details>
