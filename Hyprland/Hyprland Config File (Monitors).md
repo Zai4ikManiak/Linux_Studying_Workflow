@@ -9,7 +9,10 @@
 monitorv2 {
 
 	output = 
-	
+	mode = 
+	position =
+	scale = 
+	transform = 
 }
 ```
 
@@ -19,5 +22,14 @@ monitorv2 {
 
 > - **Blank Filed**:
 > - **Name of the Monitro**:
+
+</details>
+<details>
+
+<summary><ins>mode = </ins></summary>
+
+> - aaa
+> - bbb
+> - ccc
 
 </details>
