@@ -5,11 +5,19 @@
 
 ### monitorv2 Function Parameters:
 
+```text
 monitorv2 {
 
-<ins>output = </ins>
->
-> Blank Filed:
-> Name of the Monitro:
-
+	output = 
+	
 }
+```
+
+<details>
+
+<summary><ins>output = </ins></summary>
+
+> - **Blank Filed**:
+> - **Name of the Monitro**:
+
+</details>
