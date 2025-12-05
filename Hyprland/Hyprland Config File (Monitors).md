@@ -3,9 +3,7 @@
 
 ---
 
-### monitorv2 Function:
-
-monitor {
+### monitorv2 Function Parameters:
 
 <details>
 
@@ -15,5 +13,3 @@ monitor {
 > - **Name of the Display**: Only the indicated display will use the rules of this function.
 
 </details>
-
-}
