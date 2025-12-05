@@ -20,6 +20,7 @@ monitorv2 {
 
 <summary><ins>output = </ins></summary>
 
+>
 > **Blank Field**:
 > > Define a fallback rule to use when no other rules match
 > 
