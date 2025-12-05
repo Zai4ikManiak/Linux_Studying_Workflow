@@ -6,5 +6,5 @@
 ### monitorv2 Function:
 
 monitor {
-	output = <span title="Test">x</span>
+	output = [x](## "Test")
 }
