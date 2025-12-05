@@ -6,5 +6,5 @@
 ### monitorv2 Function:
 
 monitor {
-	output = [x](## "Test")
+	output = [x](## "Test\br Test1")
 }
