@@ -10,8 +10,8 @@
 monitorv2 {
 |
 |	output = x
-|		 * Blank Filed:
-|		 * Name of the Screen:
+|			* Blank Filed:
+|			* Name of the Screen:
 }
 
 ```
