@@ -6,5 +6,5 @@
 ### monitorv2 Function:
 
 monitor {
-	output = <abbr title="Test">x</abbr>
+	output = <span title="Test">x</span>
 }
