@@ -15,15 +15,15 @@ monitorv2 {
 	transform = 
 }
 ```
-
+---
 <details>
 
 <summary><ins>output = </ins></summary>
 
-> - **Blank Field**:
+> **Blank Field**:
 > > Define a fallback rule to use when no other rules match
 > 
-> - **Name of the Monitor**:
+> **Name of the Monitor**:
 > > Set the rule of the monitor.
 
 ---
