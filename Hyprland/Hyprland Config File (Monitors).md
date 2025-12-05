@@ -7,10 +7,9 @@
 
 monitorv2 {
 
-> **output = x**
+**output = x**
 >
->  Blank Filed:
-
----
+> Blank Filed:
+> Name of the Monitro:
 
 }
