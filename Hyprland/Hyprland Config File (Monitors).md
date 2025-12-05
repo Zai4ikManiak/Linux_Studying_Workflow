@@ -7,8 +7,9 @@
 
 monitor {
 
-> **output = X**<\br>
-> [Balnk Field](## "If this field is left blank, any display will use the rules of this function.")
-> [Name of the Display](## "Only the indicated display will use the rules of this function.")
+> **output = X**
+>
+> - [Balnk Field](## "If this field is left blank, any display will use the rules of this function.")
+> - [Name of the Display](## "Only the indicated display will use the rules of this function.")
 
 }
