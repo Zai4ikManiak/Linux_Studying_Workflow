@@ -9,9 +9,11 @@
 
 monitorv2 {
 |
-|	output = x
-|			 * Blank Filed:
-|			 * Name of the Screen:
+|	output =
+|			* Blank Filed:
+|			| Any undefined monitor will use the rules indicated in this function. 
+|			|
+|			* Name of the Screen:
 }
 
 ```
