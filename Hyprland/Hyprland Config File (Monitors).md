@@ -7,7 +7,7 @@
 
 monitorv2 {
 
-**output = x**
+<ins>output = </ins>
 >
 > Blank Filed:
 > Name of the Monitro:
