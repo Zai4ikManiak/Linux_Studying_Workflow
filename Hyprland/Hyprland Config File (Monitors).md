@@ -5,11 +5,13 @@
 
 ### monitorv2 Function Parameters:
 
-<details>
+```text
 
-<summary><strong>output =</strong></summary>
+monitorv2 {
+|
+|	output = x
+|		 * Blank Filed:
+|		 * Name of the Screen:
+}
 
-> - **Blank Field**: If this field is left blank, any display will use the rules of this function.
-> - **Name of the Display**: Only the indicated display will use the rules of this function.
-
-</details>
+```
