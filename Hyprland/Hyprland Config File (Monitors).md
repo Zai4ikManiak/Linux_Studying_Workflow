@@ -103,7 +103,9 @@ A reserved area is an area that remains unoccupied by tiled windows. If your wor
 
 | Value | Description |
 | :--- | :--- |
-| `<Fixed Values>` | Integers, i.e the number in pixels of the reserved area to add.</br> This does stack on top of the calculated reserved area (e.g. bars), but you may only use one of these rules per monitor in the config. |
+| `<Fixed Values>` | Integers, i.e the number in pixels of the reserved area to add. | 
+
+This does stack on top of the calculated reserved area (e.g. bars), but you may only use one of these rules per monitor in the config.
 ---
 </details>
 
