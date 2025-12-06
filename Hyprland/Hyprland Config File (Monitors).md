@@ -7,7 +7,6 @@ hyprctl monitors all
 ```
 
 ---
-
 ## Syntax and Parameters
 
 ### Default Format:
@@ -30,8 +29,8 @@ monitorv2 {
 	scale = <scale>
 }
 ```
-
-### Syntax Explanatation:
+---
+## Syntax Explanatation:
 
 <details>
 
@@ -40,6 +39,20 @@ monitorv2 {
 | Value | Description |
 | :--- | :--- |
 | `Blank Field` | Leaving the name empty will define a fallback rule to use when no other rules match. |
-| `Name of the Monitor` | Rule to use on a specific monitor by it's name |
+| `Name of the Monitor` | Rule to use on a specific monitor by it's name. |
+---
+</details>
+<details>
 
+<summary><strong>Screen Resolution</strong></summary>
+
+| Value | Description |
+| :--- | :--- |
+| `1920x1080@144` | Force 1920x1080 display, at 144Hz resolution. |
+| `preferred` | Use the display’s preferred size and refresh rate. |
+| `highres` | Use the highest supported resolution. |
+| `highrr` | Use the highest supported refresh rate. |
+| `maxwidth` | Use the widest supported resolution. |
+
+---
 </details>
