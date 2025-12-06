@@ -27,6 +27,6 @@ monitorv2 {
 
 <details>
 
-<summary><strong>Name of the Screen</strong><summary>
+<summary><strong>Name of the Screen</strong></summary>
 
 </details>
