@@ -16,6 +16,10 @@ hyprctl monitors all
 
 monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 
+# ! Disable monitor
+
+monitor = <name_of_the_screen>, disable
+
 # ! Extended parameters added to the default parameters
 
 # Custom Reserved Area
@@ -43,6 +47,9 @@ monitorv2 {
 	position = <position>
 	scale = <scale>
 	
+	# ! Disable monitor
+	disable = true
+
 	# Extended parameters
 	
 	addreserved = <costom_reserved_area_top>, <costom_reserved_area_bottom>, <costom_reserved_area_left>, <costom_reserved_area_right>
