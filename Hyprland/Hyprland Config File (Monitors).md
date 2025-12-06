@@ -18,14 +18,14 @@ monitorv2 {
 ---
 <details>
 
-<summary><ins>output = </ins></summary>
----
+<summary><strong>output</strong></summary>
 
 > **Blank Field**:
 > > Define a fallback rule to use when no other rules match
 > 
 > **Name of the Monitor**:
 > > Set the rule of the monitor.
+
 ---
 </details>
 <details>
