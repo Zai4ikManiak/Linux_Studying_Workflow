@@ -90,9 +90,11 @@ monitorv2 {
 
 <summary><strong>Screen Scale</strong></summary>
 </br>
+
 | Value | Description |
 | :--- | :--- |
 | `<Fixed value>` | A floating number, which is scaled in % (ex. 1 = 100%, 1.25 = 125%) |
+
 ---
 </details>
 <details>
