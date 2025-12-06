@@ -21,6 +21,14 @@ monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 # Custom Reserved Area
 , <costom_reserved_area_top>, <costom_reserved_area_bottom>, <costom_reserved_area_left>, <costom_reserved_area_right>
 
+# 10-bit Support
+, bitdepth, 10
+
+# Color Management presets
+, cm, <color_management_preset>
+
+# Rotation
+, transform, <rotation_value>
 ```
 
 ### Monitorv2 Format:
@@ -38,6 +46,9 @@ monitorv2 {
 	# Extended parameters
 	
 	addreserved = <costom_reserved_area_top>, <costom_reserved_area_bottom>, <costom_reserved_area_left>, <costom_reserved_area_right>
+	bitdepth = 10
+	cm = <color_management_preset>
+	transform = <rotation_value>
 }
 ```
 ---
@@ -46,6 +57,7 @@ monitorv2 {
 <details>
 
 <summary><strong>Name of the Screen</strong></summary>
+</br>
 
 | Value | Description |
 | :--- | :--- |
@@ -57,6 +69,7 @@ monitorv2 {
 <details>
 
 <summary><strong>Screen Resolution</strong></summary>
+</br>
 
 | Value | Description |
 | :--- | :--- |
@@ -70,6 +83,7 @@ monitorv2 {
 <details>
 
 <summary><strong>Position</strong></summary>
+</br>
 
 | Value | Description |
 | :--- | :--- |
@@ -113,6 +127,42 @@ A reserved area is an area that remains unoccupied by tiled windows. If your wor
 > **NOTE**
 >
 > This does stack on top of the calculated reserved area (e.g. bars), but you may only use one of these rules per monitor in the config.
+---
+</details>
+<details>
+
+<summary><strong>Color Management Presets</strong></summary>
+</br>
+
+| Value | Description |
+| :--- | :--- |
+| `auto` | srgb for 8bpc, wide for 10bpc if supported (recommended). |
+| `srgb` | sRGB primaries (default). |
+| `dcip3` | DCI P3 primaries. |
+| `dp3` | Apple P3 primaries. |
+| `adobe` | Adobe RGB primaries. |
+| `wide` | Wide color gamut, BT2020 primaries. |
+| `edid` | Primaries from edid (known to be inaccurate). |
+| `hdr` | Wide color gamut and HDR PQ transfer function (experimental). |
+| `hdredid` | Same as hdr with edid primaries (experimental). |
+
+---
+</details>
+<details>
+
+<summary><strong>Screen Rotation</strong></summary>
+</br>
+
+| Value | Description |
+| :--- | :--- |
+| `0` | normal (no transforms) |
+| `1` | 90 degrees |
+| `2` | 180 degrees |
+| `3` | 270 degrees |
+| `4` | flipped |
+| `5` | flipped + 90 degrees |
+| `6` | flipped + 180 degrees |
+| `7` | flipped + 270 degrees |
 ---
 </details>
 
