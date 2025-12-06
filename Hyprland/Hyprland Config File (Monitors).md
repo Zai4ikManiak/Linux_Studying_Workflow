@@ -16,7 +16,7 @@ hyprctl monitors all
 monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 
 # Extended parameters
-monitor = <name_of_the_screen>, <resolution>, <position>, <scale>, 
+monitor = <name_of_the_screen>, <resolution>, <position>, <scale>, <costom_reserved_area_top>, <costom_reserved_area_bottom>, <costom_reserved_area_left>, <costom_reserved_area_right>
 ```
 
 ### Monitorv2 Format:
@@ -74,7 +74,24 @@ monitorv2 {
 > Also, the direction is always from the center out, so you can specify auto-up then auto-left, but the left monitors will just be left of the origin and above the origin. 
 >
 > You can also specify duplicate directions and monitors will continue to go in that direction.
+---
+</details>
+<details>
 
+<summary><strong>Screen Scale</strong></summary>
+
+| Value | Description |
+| :--- | :--- |
+| `<Fixed value>` | A floating number, which is scaled in % (ex. 1 = 100%, 1.25 = 125%) |
+---
+</details>
+<details>
+
+<summary><strong>Custom Reserved Area</strong></summary>
+
+| Value | Description |
+| :--- | :--- |
+| `<Fixed value>` | A floating number, which is scaled in % (ex. 1 = 100%, 1.25 = 125%) |
 ---
 </details>
 
