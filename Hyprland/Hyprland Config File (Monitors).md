@@ -20,11 +20,12 @@ monitorv2 {
 
 <summary><strong>output</strong></summary>
 
-> <ins>[Blank Field]</ins>:
-> - Define a fallback rule to use when no other rules match
+> <ins>[Blank Field]</ins>
+> Define a fallback rule to use when no other rules match
 > 
-> **Name of the Monitor**:
-> > Set the rule of the monitor.
+> ---
+> <ins>[Name of the Monitor]</ins>
+> Set the rule of the monitor.
 
 ---
 </details>
