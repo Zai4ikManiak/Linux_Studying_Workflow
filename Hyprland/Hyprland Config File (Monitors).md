@@ -15,9 +15,9 @@ Monitorv2 Format:
 ```text
 monitorv2 {
 
-	output = 
-	mode = 
-	position =
-	scale = 
+	output = <name_of_the_screen>
+	mode = <resolution>
+	position = <position>
+	scale = <scale>
 }
 ```
