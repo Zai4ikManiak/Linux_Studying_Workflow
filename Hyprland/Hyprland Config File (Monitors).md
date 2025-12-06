@@ -12,7 +12,8 @@ hyprctl monitors all
 ### Default Format:
 
 ```text
-# ! Default parameters
+# ! Default parameters:
+
 monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 
 # ! Extended parameters added to the default parameters
@@ -27,10 +28,16 @@ monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 ```text
 monitorv2 {
 
+	# ! Default parameters:
+	
 	output = <name_of_the_screen>
 	mode = <resolution>
 	position = <position>
 	scale = <scale>
+	
+	# Extended parameters
+	
+	addreserved = <costom_reserved_area_top>, <costom_reserved_area_bottom>, <costom_reserved_area_left>, <costom_reserved_area_right>
 }
 ```
 ---
