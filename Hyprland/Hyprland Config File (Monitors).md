@@ -99,9 +99,11 @@ monitorv2 {
 
 <summary><strong>Custom Reserved Area</strong></summary>
 
+A reserved area is an area that remains unoccupied by tiled windows. If your workflow requires a custom reserved area.
+
 | Value | Description |
 | :--- | :--- |
-| `<Fixed value>` | A floating number, which is scaled in % (ex. 1 = 100%, 1.25 = 125%) |
+| `<Fixed Values>` | Integers, i.e the number in pixels of the reserved area to add.</br> This does stack on top of the calculated reserved area (e.g. bars), but you may only use one of these rules per monitor in the config. |
 ---
 </details>
 
