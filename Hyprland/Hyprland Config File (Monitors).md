@@ -101,7 +101,10 @@ monitorv2 {
 
 <summary><strong>Custom Reserved Area</strong></summary>
 </br>
+
 A reserved area is an area that remains unoccupied by tiled windows. If your workflow requires a custom reserved area.
+
+</br>
 
 | Value | Description |
 | :--- | :--- |
