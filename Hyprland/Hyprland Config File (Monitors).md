@@ -38,8 +38,9 @@ monitorv2 {
 
 | Value | Description |
 | :--- | :--- |
-| `Blank Field` | Leaving the name empty will define a fallback rule to use when no other rules match. |
-| `Name of the Monitor` | Rule to use on a specific monitor by it's name. |
+| `<Blank Field>` | Leaving the name empty will define a fallback rule to use when no other rules match. |
+| `<Port Name>` | Rule to use on a specific monitor defined by it's port name. |
+| `desc:<Name of the Monitor>` | Rule to use on a specific monitor by it's description from `hyprctl monitors all` |
 ---
 </details>
 <details>
@@ -48,11 +49,23 @@ monitorv2 {
 
 | Value | Description |
 | :--- | :--- |
-| `1920x1080@144` | Force 1920x1080 display, at 144Hz resolution. |
+| `<Fixed Parameters>` | Force 1920x1080 display, at 144Hz resolution. |
 | `preferred` | Use the display’s preferred size and refresh rate. |
 | `highres` | Use the highest supported resolution. |
 | `highrr` | Use the highest supported refresh rate. |
 | `maxwidth` | Use the widest supported resolution. |
-
 ---
 </details>
+<details>
+
+<summary><strong>Position</strong></summary>
+
+| Value | Description |
+| :--- | :--- |
+| `<Fixed Position>` | Force monitor layout to start at fixed position (ex. 0x0). |
+| `auto` | Hyprland decide on a position. By default, it places each new monitor to the right of existing ones, using the monitor’s top left corner as the root point. |
+| `auto-right/left/up/down` | Place the monitor to the right/left, above or below other monitors, also based on each monitor’s top left corner as the root. |
+| `auto-center-right/left/up/down` | Place the monitor to the right/left, above or below other monitors, but calculate placement from each monitor’s center rather than its top left corner. |
+---
+</details>
+
