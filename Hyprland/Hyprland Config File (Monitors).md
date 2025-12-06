@@ -23,7 +23,6 @@ monitorv2 {
 > <ins>[Blank Field]</ins>
 > Define a fallback rule to use when no other rules match
 > 
-> ---
 > <ins>[Name of the Monitor]</ins>
 > Set the rule of the monitor.
 
