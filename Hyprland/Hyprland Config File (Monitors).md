@@ -3,8 +3,15 @@
 
 ---
 
-### monitorv2 Function Parameters:
+### Basic Syntax and Rules
 
+Default Format:
+```text
+monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
+```
+
+
+Monitorv2 Format:
 ```text
 monitorv2 {
 
@@ -12,28 +19,5 @@ monitorv2 {
 	mode = 
 	position =
 	scale = 
-	transform = 
 }
 ```
----
-<details>
-
-<summary><strong>output</strong></summary>
-
-> <ins>[Blank Field]</ins>
-> - Define a fallback rule to use when no other rules match
-> 
-> <ins>[Name of the Monitor]</ins>
-> - Set the rule of the monitor.
-
----
-</details>
-<details>
-
-<summary><ins>mode = </ins></summary>
-
-> - aaa
-> - bbb
-> - ccc
-
-</details>
