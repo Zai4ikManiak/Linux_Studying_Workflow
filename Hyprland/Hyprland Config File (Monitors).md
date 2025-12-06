@@ -89,7 +89,7 @@ monitorv2 {
 <details>
 
 <summary><strong>Screen Scale</strong></summary>
-
+</br>
 | Value | Description |
 | :--- | :--- |
 | `<Fixed value>` | A floating number, which is scaled in % (ex. 1 = 100%, 1.25 = 125%) |
@@ -98,7 +98,7 @@ monitorv2 {
 <details>
 
 <summary><strong>Custom Reserved Area</strong></summary>
-
+</br>
 A reserved area is an area that remains unoccupied by tiled windows. If your workflow requires a custom reserved area.
 
 | Value | Description |
