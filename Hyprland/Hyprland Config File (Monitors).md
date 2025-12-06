@@ -16,6 +16,7 @@ hyprctl monitors all
 monitor = <name_of_the_screen>, <resolution>, <position>, <scale>
 
 # Extended parameters
+monitor = <name_of_the_screen>, <resolution>, <position>, <scale>, 
 ```
 
 ### Monitorv2 Format:
@@ -66,6 +67,14 @@ monitorv2 {
 | `auto` | Hyprland decide on a position. By default, it places each new monitor to the right of existing ones, using the monitor’s top left corner as the root point. |
 | `auto-right/left/up/down` | Place the monitor to the right/left, above or below other monitors, also based on each monitor’s top left corner as the root. |
 | `auto-center-right/left/up/down` | Place the monitor to the right/left, above or below other monitors, but calculate placement from each monitor’s center rather than its top left corner. |
+
+> **NOTE**
+>
+> While specifying a monitor direction for your first monitor is allowed, this does nothing and it will be positioned at (0,0). 
+> Also, the direction is always from the center out, so you can specify auto-up then auto-left, but the left monitors will just be left of the origin and above the origin. 
+>
+> You can also specify duplicate directions and monitors will continue to go in that direction.
+
 ---
 </details>
 
