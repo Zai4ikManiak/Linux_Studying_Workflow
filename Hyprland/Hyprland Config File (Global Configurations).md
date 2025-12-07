@@ -21,7 +21,7 @@ general {
 	gaps_out = 20
 	
 	col.active_border = rgb(9c1010)
-	col.incative_border = rgb(545353)
+	col.inactive_border = rgb(545353)
 
 	resize_on_border = true
 	extend_on_border = 5
@@ -31,8 +31,8 @@ general {
 
 	# Configure Grouped windows' default
 
-	col.nogroup_border_active = 0xe6e6e6ff
-	col.nogroup_border = 0xd10202ff
+	col.nogroup_border_active = 0xd40202ff
+	col.nogroup_border = 0xe6e6e6ff
 
 	# Configuring Floating windows' default
 
