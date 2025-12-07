@@ -31,8 +31,8 @@ general {
 
 	# Configure Grouped windows' default
 
-	col.nogroup_border_active = rgb(d40202)
-	col_nogroup_border = rgb(e6e6e6)
+	col.nogroup_border_active = 0xe6e6e6ff
+	col.nogroup_border = 0xd10202ff
 
 	# Configuring Floating windows' default
 
