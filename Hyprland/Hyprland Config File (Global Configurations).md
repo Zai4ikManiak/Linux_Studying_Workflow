@@ -6,9 +6,13 @@ Gloabla configurations for Hyprland can be split into several parts:
 
 <summary><strong>general</strong></summary>
 
+</br>
+
 <details>
 
 <summary>Windows Configurations</summary>
+
+</br>
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
@@ -24,6 +28,8 @@ Gloabla configurations for Hyprland can be split into several parts:
 
 <summary>Floating Windows Configuration</summary>
 
+</br>
+
 | Name | Description | Type |
 | :--- | :--- | :--- |
 | `no_border_on_floating` | Disable borders for floating windows. | **bool** |
@@ -32,6 +38,8 @@ Gloabla configurations for Hyprland can be split into several parts:
 ---
 </details>
 <details>
+
+</br>
 
 <summary>Workspace Configuration</summary>
 
