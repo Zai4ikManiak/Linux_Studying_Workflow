@@ -23,6 +23,10 @@ Gloabla configurations for Hyprland can be split into several parts:
 | `col.active_border` | Window | Border color for the active window. | **gradient** |
 | --- | --- | --- | --- |
 | `col.nogroup_border`</br> | Grouped Window | Inactive border color for window that cannot be added to a group.</br>Check `denywindowfromgroup`. | **gradient** |
+| --- | --- | --- | --- |
+| `no_border_on_floating` | Floating Window | Disable borders for floating windows. | **bool** |
+| `float_gaps`</br> | Floating Window | Gaps between windows and monitor edges for floating windows.</br>It support css style gaps (top, right, buttom, left). | **int** |
+
 ---
 </details>
 <details>
