@@ -21,6 +21,7 @@ Gloabla configurations for Hyprland can be split into several parts:
 | `gaps_out`</br> | Window |Gaps between windows and monitor edges.</br>It support css style gaps (top, right, buttom, left). | **int** |
 | `col.inactive_border` | Window | Border color for inactive windows. | **gradient** |
 | `col.active_border` | Window | Border color for the active window. | **gradient** |
+| --- | --- | --- | --- |
 | `col.nogroup_border`</br> | Grouped Window | Inactive border color for window that cannot be added to a group.</br>Check `denywindowfromgroup`. | **gradient** |
 ---
 </details>
