@@ -179,18 +179,23 @@ decoration {
 
 	rounding = 0
 	rounding_power = 2.0
+	
 	active_opacity = 1.0
 	inactive_opacity = 1.0
 	fullscreen_opacity = 1.0
 
 	dim_modal = true
-	dim_inactive = false
-	dim_strength = 0.5
 	dim_special = 0.2
 	dim_around = 0.4
+	dim_inactive = false
+	# dim_strength = 0.5
 
-	screen_shader = ""
+	# screen_shader = ""
 	border_part_of_window = true
+
+	blur {
+
+	}
 
 }
 ```
