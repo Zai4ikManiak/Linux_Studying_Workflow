@@ -14,7 +14,6 @@ Gloabla configurations for Hyprland can be split into several parts:
 general {
 
 	# Configuring Windows' default.
-	
 	border_size = 3
 	
 	gaps_in = 5
@@ -23,22 +22,39 @@ general {
 	col.active_border = rgb(9c1010)
 	col.inactive_border = rgb(545353)
 
-	resize_on_border = true
+	resize_on_border = false
 	extend_on_border = 5
-	hover_icon_on_border = true
+	hover_icon_on_border = false
 
 	modal_parent_blocking = true
 
 	# Configure Grouped windows' default
-
-	col.nogroup_border_active = 0xd40202ff
+	col.nogroup_border_active = 0xd10202ff
 	col.nogroup_border = 0xe6e6e6ff
 
-	# Configuring Floating windows' default
+	# Gaps between workspaces
+	gaps_workspaces = 0
 
+	# Allow Tearing page
+	allow_tearing = false
+
+	# Specify layout
+	layout = dwindle
+
+	# Windows focus fall-back
+	no_focus_fallback = false
+
+	# Configuring Floating windows' default
 	no_border_on_floating = true
 	float_gaps = 10
 	resize_corner = 1
+	snap {
+		enabled = true
+		window_gap = 10
+		monitor_gap = 10
+		border_overlap = false
+		respect_gaps = false
+	}
 }
 
 ```
@@ -124,5 +140,11 @@ general {
 </details>
 
 ---
+
+<details>
+
+<summary>`snap` <strong>subfunction</strong></summary>
+
+</details>
 
 </details>
