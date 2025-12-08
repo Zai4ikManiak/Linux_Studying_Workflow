@@ -210,6 +210,14 @@ decoration {
 | `screen_shader`</br> | A path to a custom shader to be applied at the end of rendering.</br>Check `examples/screenShader.frag` for an example. | **str** |
 | `border_part_of_window` | Whether the window border should be a part of the window. | **bool** |
 
+---
+
+<details>
+
+<summary><strong>blur</strong> <ins>subfunction</ins><summary>
+
+</details>
+
 </details>
 
 ---
