@@ -4,7 +4,7 @@ Gloabla configurations for Hyprland can be split into several parts:
 
 <details>
 
-<summary><strong>general</strong></summary>
+<summary><strong>General</strong></summary>
 
 </br>
 
@@ -161,6 +161,26 @@ general {
 
 
 </details>
+
+</details>
+
+---
+
+<details>
+
+<summary><strong>Decoration</strong></summary>
+
+</br>
+
+```c++
+
+```
+
+| Name | Description | Type |
+| :--- | :--- | :--- |
+| `rounding` | Rounded corners’ radius (in layout px). | **int** |
+| `rounding_power`</br> | Adjust the curve used for rounding corners.</br>Larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0] | **float** |
+| `active_opacity` | Opacity of active windows. [0.0 - 1.0] | **float** |
 
 </details>
 
