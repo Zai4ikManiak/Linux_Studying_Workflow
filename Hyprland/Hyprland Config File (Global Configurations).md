@@ -8,7 +8,7 @@ Gloabla configurations for Hyprland can be split into several parts:
 
 </br>
 
-```text
+```c++
 # Example of configuration file:
 
 general {
