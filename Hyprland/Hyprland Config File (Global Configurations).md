@@ -13,7 +13,7 @@ Gloabla configurations for Hyprland can be split into several parts:
 
 general {
 
-	# Configuring Windows' default.
+	# Configuring Default Windows behavior.
 	border_size = 3
 	
 	gaps_in = 5
@@ -44,7 +44,7 @@ general {
 	# Windows focus fall-back
 	no_focus_fallback = false
 
-	# Configuring Floating windows' default
+	# Configuring Default Floating default
 	no_border_on_floating = true
 	float_gaps = 10
 	resize_corner = 1
