@@ -214,7 +214,7 @@ decoration {
 
 <details>
 
-<summary><strong>blur</strong> <ins>subfunction</ins><summary>
+<summary><strong>blur</strong> <ins>subfunction</ins></summary>
 
 </details>
 
