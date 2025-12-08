@@ -181,6 +181,15 @@ general {
 | `rounding` | Rounded corners’ radius (in layout px). | **int** |
 | `rounding_power`</br> | Adjust the curve used for rounding corners.</br>Larger is smoother, 2.0 is a circle, 4.0 is a squircle, 1.0 is a triangular corner. [1.0 - 10.0] | **float** |
 | `active_opacity` | Opacity of active windows. [0.0 - 1.0] | **float** |
+| `inactive_opacity` | Opacity of inactive windows. [0.0 - 1.0] | **float** |
+| `fullscreen_opacity` | Opacity of fullscreen windows. [0.0 - 1.0] | **float** |
+| `dim_modal` | Enables dimming of parents of modal windows. | **bool** |
+| `dim_inactive` | Enables dimming of inactive windows. | **bool** |
+| `dim_strength` | How much inactive windows should be dimmed. [0.0 - 1.0] | **float** |
+| `dim_special` | How much to dim the rest of the screen by when a special workspace is open. [0.0 - 1.0] | **float** |
+| `dim_around` | How much the `dimaround` window rule should dim by. [0.0 - 1.0] | **float** |
+| `screen_shader`</br> | A path to a custom shader to be applied at the end of rendering.</br>Check `examples/screenShader.frag` for an example. | **str** |
+| `border_part_of_window` | Whether the window border should be a part of the window. | **bool** |
 
 </details>
 
