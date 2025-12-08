@@ -143,8 +143,25 @@ general {
 
 <details>
 
-<summary>`snap` <strong>subfunction</strong></summary>
+<summary><strong>snap</strong> <ins>subfunction</ins></summary>
+
+</br>
+
+> **NOTE**
+> 
+> Used only for floating windows.
+
+| Name | Description | Type |
+| :--- | :--- | :--- |
+| `enabled` | Enable snapping for floating windows. | **bool** |
+| `window_gap` | Minimum gap in pixels between windows before snapping. | **int** |
+| `monitor_gap` | Minimum gap in pixels between window and monitor edges before snapping. | **int** |
+| `border_overlap` | If true, windows snap such that only one border’s worth of space is between them. | **bool** |
+| `respect_gaps` | If true, snapping will respect gaps between windows(set in general:`gaps_in`) | **bool** |
+
 
 </details>
 
 </details>
+
+---
