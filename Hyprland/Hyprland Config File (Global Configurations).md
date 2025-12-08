@@ -28,7 +28,7 @@ general {
 
 	modal_parent_blocking = true
 
-	# Configure Grouped windows' default
+	# Configure Grouped Windows
 	col.nogroup_border_active = 0xd10202ff
 	col.nogroup_border = 0xe6e6e6ff
 
