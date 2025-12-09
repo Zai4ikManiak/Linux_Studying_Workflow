@@ -360,7 +360,7 @@ animations {
 
 	# Layers
 	animation =	layers,				1,		3.81,	easeOutQuint
-	animation =	layersIn,			1,		4,	easeOutQuint, fade
+	animation =	layersIn,			1,		4,		easeOutQuint, fade
 	animation =	layersOut,			1,		1.5,	linear
 
 	# Workspaces
@@ -370,7 +370,7 @@ animations {
 	animation =	specialWorkspace,	1,		0.01,	linear
 
 	# Zoom
-	animation = zoomFactor,			1,		7,	quick
+	animation = zoomFactor,			1,		7,		quick
 
 	# Add Monitor
 	animation = monitorAdded,		1,		0.5,	almostLinear
