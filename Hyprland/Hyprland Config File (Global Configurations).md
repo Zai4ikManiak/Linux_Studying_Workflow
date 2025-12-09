@@ -331,6 +331,7 @@ animations {
 	# Animations
 	#			NAME,		ONOFF,	SPEED,	CURVE,		[STYLE]
 	animation =	global,		1,		10,		default
+	animation =	windows,	1,		4.79,		easeOutQuint
 
 }
 
