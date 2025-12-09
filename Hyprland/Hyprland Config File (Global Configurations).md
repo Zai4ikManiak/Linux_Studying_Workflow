@@ -354,17 +354,17 @@ animations {
 	animation =	fadeLayersIn,	1,		1.79,	almostLinear
 	animation =	fadeLayersOut,	1,		1.39,	almostLinear
 	animation =	fadePopups,	1,		1.3,	quick
-	animation =	fadePopupsIn,	1,		1.3,	quick
-	animation =	fadePopupsOut,	1,		1.3,	quick
+	animation =	fadePopupsIn,		1,		1.3,	quick
+	animation =	fadePopupsOut,		1,		1.3,	quick
 	animation =	fadeDpms,		1,		1.3,	quick
 
 	# Layers
-	animation =	layers,			1,		3.81,	easeOutQuint
-	animation =	layersIn,		1,		4,	easeOutQuint, fade
-	animation =	layersOut,		1,		1.5,	linear
+	animation =	layers,				1,		3.81,	easeOutQuint
+	animation =	layersIn,			1,		4,	easeOutQuint, fade
+	animation =	layersOut,			1,		1.5,	linear
 
 	# Workspaces
-	animation =	workspaces,		1,		1.94,	almostLinear
+	animation =	workspaces,			1,		1.94,	almostLinear
 	animation =	workspacesIn,		1,		1.21,	almostLinear,	fade
 	animation =	workspacesOut,		1,		1.94,	almostLinear,	fade
 	animation =	specialWorkspace,	1,		0.01,	linear
