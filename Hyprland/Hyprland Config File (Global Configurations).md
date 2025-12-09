@@ -195,6 +195,39 @@ decoration {
 
 	blur {
 
+		# Blur default configuration
+		enabled = true
+		size = 8
+		passes = 1
+		ignore_opacity = true
+		new_optimization = true
+		xray = false
+		noise = 0.0117
+		contrast = 0.8916
+		brightness = 0.8172
+		vibrancy = 0.1696
+		vibrancy darkness = 0
+		special = false
+		popups = false
+		popups_ignorealpha = 0.2
+		input_methods = false
+		input_methods_ignorealpha = 0.2
+	}
+
+	shadow {
+
+		# Default shadow configuration
+
+		enabled = true
+		range = 4
+		render_power = 3
+		sharp = false
+		ignore_window = true
+		color = 0xee1a1a1a
+		color_incative = unset
+		offset = 0 0
+		scale = 1.0
+
 	}
 
 }
@@ -239,6 +272,26 @@ decoration {
 | `popups_ignorealpha`</br> | Works like ignorealpha in layer rules.</br>If pixel opacity is below set value, will not blur. [0.0 - 1.0] | **float** |
 | `input_methods` | Whether to blur input methods (e.g. fcitx5) | **bool** |
 | `input_methods_ignorealpha`</br> | Works like ignorealpha in layer rules.</br>If pixel opacity is below set value, will not blur. [0.0 - 1.0] | **float** |
+
+---
+
+</details>
+
+<details>
+
+<summary><strong>shadow</strong> <ins>subfunction</ins></summary>
+
+| Name | Description | Type |
+| :--- | :--- | :--- |
+| `enabled` | Enable drop shadows on windows. | **bool** |
+| `range` | Shadow range (“size”) in layout px. | **int** |
+| `render_power` | In what power to render the falloff (more power, the faster the falloff) [1 - 4] | **int** |
+| `sharp` | If enabled, will make the shadows sharp, akin to an infinite render power. | **bool** |
+| `ignore_window` | If true, the shadow will not be rendered behind the window itself, only around it. | **bool** |
+| `color` | Shadow’s color. Alpha dictates shadow’s opacity. | **color** |
+| `color_inactive` | Inactive shadow color. (if not set, will fall back to color) | **color** |
+| `offset` | Shadow’s rendering offset. | **vec2** |
+| `scale` | Shadow’s scale. [0.0 - 1.0] | **float** |
 
 </details>
 
