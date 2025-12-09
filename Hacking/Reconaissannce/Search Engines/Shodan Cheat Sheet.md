@@ -843,14 +843,86 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 <details>
 
-<summary>SSL</summary>
+<summary><strong><em>SSL</em></strong></summary>
+
+---
+
+<details>
+
+<summary><strong>ssl:</strong> <em>Search information found in a device’s <ins>public SSL/TLS certificate</ins> or its <ins>TLS configuration</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+>  It’s public metadata, not private or decrypted content.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl:"Let's Encrypt"` | `shodan search --limit 3 ssl:"Let's Encrypt"` |
+---
+</details>
+<details>
+
+<summary><strong>has_ssl:</strong> <em>Search for devices that <ins>do or do not have SSL/TLS enabled</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> It doesn’t access anything private — it only checks whether a service uses encrypted connections such as:
+> - HTTPS
+> - SMTPS
+> - FTPS
+> - Any other TLS-wrapped service
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `has_ssl:true` | `shodan search --limit 3 has_ssl:true` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.alpn:</strong> <em>Search for devices that advertise specific <ins>ALPN protocols</ins> during the TLS handshake.</em></summary>
+
+---
+> ***NOTE***
+>
+> ALPN (Application-Layer Protocol Negotiation) is a TLS extension that lets a server tell the client what protocol it supports over TLS.
+> 
+> Common ALPN protocols include:
+> - `h2` : HTTP/2
+> - `http/1.1` - standard HTTP
+> - `h3` - HTTP/3 (over QUIC, but sometimes appears with TLS metadata)
+> - `spdy/3.1` -> old Google SPDY protocol
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.alpn:"spdy/3.1"` | `shodan search --limit 3 ssl.alpn:"spdy/3.1"` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.alg:</strong> <em>Search Shodan for devices whose <ins>SSL/TLS certificate uses a specific cryptographic algorithm</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> This refers to the algorithm used to sign the certificate, not the encryption of the traffic itself
+> 
+> Common certificate signature algorithms include:
+> - RSA
+> - ECDSA
+> - sha256RSA
+> - sha1RSQ
+> - sha38ECDSA
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.alg:sha1RSA` | `shodan search --limit 3 ssl.cert.alg:sha1RSA` |
+---
+</details>
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `ssl` | Used to match *raw SSL/TLS data blocks* that Shodan captured from a service. | `ssl:"TLSv1.2"` | `shodan search --limit 3 ssl:"TLSv1.2"` |
-| `has_ssl` | Returns results based solely on whether a service *provides SSL/TLS information, regardless of the port or protocol*. | `has_ssl:true` | `shodan search --limit 3 has_ssl:true` |
-| `ssl.alpn` | Search for hosts based on the *Application-Layer Protocol Negotiation (ALPN)* protocols they advertise during the TLS handshake. | `ssl.alpn:imap` | `shodan search --limit 3 ssl.alpn:imap`|
-| `ssl.cert.alg` | Search for hosts based on the *algorithm used to sign the SSL/TLS certificate*. It matches the *certificate signature algorithm* (not the key algorithm), meaning the crypto algorithm used by the Certificate Authority (CA) to sign the certificate. | `ssl.cert.alg:sha1` | `shodan search --limit 3 ssl.cert.alg:sha1` |
 | `ssl.cert.expired` | Search for hosts based on whether the SSL/TLS certificate they presented is currently expired. | `ssl.cert.expired:true` | `shodan search --limit 3 ssl.cert.expired:true` |
 | `ssl.cert.extension` | Search for hosts based on the X.509 certificate extensions present in the certificate the host provides. | `ssl.cert.extension:certificatePolicies` | `shodan search --limit 3 ssl.cert.extension:certificatePolicies` |
 | `ssl.cert.fingerprint` | Search for hosts by the *cryptographic fingerprint (hash)* of the certificate they present during the TLS handshake. | `ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` | `shodan search --limit 3 ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` |
@@ -867,7 +939,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `ssl.jarm` | Search for hosts based on their *JARM fingerprint* — a server‑side TLS fingerprinting method created by Salesforce to identify, classify, or cluster servers by the way they respond to *multiple crafted TLS Client Hello probes*. | `ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` | `shodan search --limit 3 ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` |
 | `ssl.version` | Search for hosts based on the *SSL/TLS protocol version* they support or negotiate during the TLS handshake. | `ssl.version:TLSv1.2` | `shodan search --limit 3 ssl.version:TLSv1.2` |
 
-</details>
+
 
 <details>
 
