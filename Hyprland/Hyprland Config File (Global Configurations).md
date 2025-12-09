@@ -334,7 +334,7 @@ animations {
 	animation =	global,				1,		10,		default
 	
 	# Border
-	animation =	border,				1,		5.39,		easeOutQuint
+	animation =	border,				1,		5.39,	easeOutQuint
 	animation =	borderangle,		0,
 
 	# Windows
@@ -481,6 +481,31 @@ animations {
 > If you want to instead choose from a list of pre-made Béziers, you can check out [easings](https://easings.net/)</br>
 
 ---
+
+</details>
+
+<details>
+
+<summary>Extras</summary>
+
+For animation style `popin` in `windows`, you can specify a minimum percentage to start from. For example, the following will make the animation 80% -> 100% of the size:
+
+```c++
+animation = windows, 1, 8, default, popin 80%
+```
+
+For animation styles `slide`, `slidevert`, `slidefade` and `slidefadevert` in `workspaces`, you can specify a movement percentage. For example, the following will make windows move 20% of the screen width:
+
+```c++
+animation = workspaces, 1, 8, default, slidefade 20%
+```
+
+For animation style `slide` in `windows` and `layers` you can specify a forced side.
+You can choose between `top`, `bottom`, `left` or `right`.
+
+```c++
+animation = windows, 1, 8, default, slide left
+```
 
 </details>
 
