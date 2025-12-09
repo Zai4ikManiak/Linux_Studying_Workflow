@@ -331,4 +331,19 @@ animations {
 
 </br>
 
+| Name | Description | Type |
+| `enabled` | Enable animations. | **bool** |
+| `workspace_wraparound` | Enable workspace wraparound, causing directional workspace animations to animate as if the first and last workspaces were adjacent | **bool** |
+
+</br>
+
+> **NOTE**
+> 
+> `animation` = NAME, ONOFF, SPEED, CURVE [,STYLE]
+> 
+> `ONOFF` use `0` to disable (if it is set, ignore further arguments) and `1` to enable.
+> `SPEED` is the amount of ds (1ds = 100ms) the animation will take.
+> `CURVE` is the bezier curve name.
+> `STYLE` (optional) is the animation style.
+
 </details>
