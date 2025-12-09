@@ -357,10 +357,10 @@ animations {
 
 <summary>Animation Tree</summary>
 
-! gloabal
-|
-\* --- > \* <ins>windows</ins>: `slide`, `popin`, `gnomed`
-	 |
+! gloabal</br>
+|</br>
+\* --- > \* <ins>windows</ins>: `slide`, `popin`, `gnomed`</br>
+	 |</br>
 	 \* <ins>windowsIn</ins> 
 
 </details>
