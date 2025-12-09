@@ -324,9 +324,9 @@ animations {
 	#	 	 NAME,				X0,		Y0,		X1,		Y1	
 	bezier = easeOutQuint,		0.23,	1,		0.32,	1
 	bezier = easeInOutCubic,	0.65,	0.55,	0.36,	1
-	bezier = linear,		0,	0,	1,	1
+	bezier = linear,			0,	0,	1,	1
 	bezier = almostLinear,		0.5,	0.5,	0.75,	1
-	bezier = quick,			0.15,	0,	0.1,	1
+	bezier = quick,				0.15,	0,	0.1,	1
 
 	# Animations
 	
@@ -360,7 +360,7 @@ animations {
 
 	# Layers
 	animation =	layers,				1,		3.81,	easeOutQuint
-	animation =	layersIn,			1,		4,		easeOutQuint, fade
+	animation =	layersIn,			1,		4,		easeOutQuint, 	fade
 	animation =	layersOut,			1,		1.5,	linear
 
 	# Workspaces
