@@ -360,8 +360,8 @@ animations {
 ! gloabal</br>
 |</br>
 \* --- > \* <ins>windows</ins>: `slide`, `popin`, `gnomed`</br>
-&emsp;&emsp;|</br>
-&emsp;&emsp;\* <ins>windowsIn</ins> 
+&emsp;&emsp;&emsp;|</br>
+&emsp;&emsp;&emsp;\* <ins>windowsIn</ins> 
 
 </details>
 
