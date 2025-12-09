@@ -331,11 +331,11 @@ animations {
 	# Animations
 	
 	# Global
-	animation =	global,		1,		10,		default
+	animation =	global,				1,		10,		default
 	
 	# Border
-	animation =	border,		1,		5.39,		easeOutQuint
-	animation =	borderangle,	0,
+	animation =	border,				1,		5.39,		easeOutQuint
+	animation =	borderangle,		0,
 
 	# Windows
 	animation =	windows,			1,		4.79,	easeOutQuint
@@ -368,6 +368,12 @@ animations {
 	animation =	workspacesIn,		1,		1.21,	almostLinear,	fade
 	animation =	workspacesOut,		1,		1.94,	almostLinear,	fade
 	animation =	specialWorkspace,	1,		0.01,	linear
+
+	# Zoom
+	animation = zoomFactor,			1,	7,	quick
+
+	# Add Monitor
+	animation = monitorAdded,		1,	0.5,	almostLinear
 
 }
 
