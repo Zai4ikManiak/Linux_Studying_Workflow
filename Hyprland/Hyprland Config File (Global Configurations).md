@@ -341,9 +341,9 @@ animations {
 > 
 > `animation` = NAME, ONOFF, SPEED, CURVE [,STYLE]
 > 
-> `ONOFF` use `0` to disable (if it is set, ignore further arguments) and `1` to enable.
-> `SPEED` is the amount of ds (1ds = 100ms) the animation will take.
-> `CURVE` is the bezier curve name.
+> `ONOFF` use `0` to disable (if it is set, ignore further arguments) and `1` to enable.</br>
+> `SPEED` is the amount of ds (1ds = 100ms) the animation will take.</br>
+> `CURVE` is the bezier curve name.</br>
 > `STYLE` (optional) is the animation style.
 
 </details>
