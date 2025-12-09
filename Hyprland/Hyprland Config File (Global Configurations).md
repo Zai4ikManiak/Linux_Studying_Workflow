@@ -322,8 +322,15 @@ animations {
 
 	# Default curves.
 	#	 	 Name,				X0,		Y0,		X1,		Y1	
-	besier = easeOutQuint,		0.23,	1,		0.32,	1
-	besier = easeInOutCubic,	0.65,	0.55,	0.36,	1
+	bezier = easeOutQuint,		0.23,	1,		0.32,	1
+	bezier = easeInOutCubic,	0.65,	0.55,	0.36,	1
+	bezier = linear,		0,	0,	1,	1
+	bezier = almostLinear,		0.5,	0.5,	0.75,	1
+	bezier = quick,			0.15,	0,	0.1,	1
+
+	# Animations
+	#		NAME,		ONOFF,	SPEED,	CURVE,		[STYLE]
+	animation =	global,		1,	10,	default
 
 }
 
@@ -429,6 +436,8 @@ animations {
 > </br>
 > A good website to design your own Bézier can be [css portal](https://www.cssportal.com/css-cubic-bezier-generator/)</br>
 > If you want to instead choose from a list of pre-made Béziers, you can check out [easings](https://easings.net/)</br>
+
+---
 
 </details>
 
