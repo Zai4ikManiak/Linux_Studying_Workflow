@@ -399,9 +399,9 @@ animations {
 |&emsp;&emsp;&emsp;\* `workspacesIn`</br>
 |&emsp;&emsp;&emsp;\* `workspacesOut`</br>
 |&emsp;&emsp;&emsp;\* `specialWorkspace`</br>
-|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
-|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `specialWorkspaceIn`</br>
-|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `specialWorkspaceOut`</br>
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp \* `specialWorkspaceIn`</br>
+|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp \* `specialWorkspaceOut`</br>
 |</br>
 \* --- > \* `zoomFactor` - animates the screen zoom</br>
 \* --- > \* `monitorAdded` - monitor added zoom animation</br>
