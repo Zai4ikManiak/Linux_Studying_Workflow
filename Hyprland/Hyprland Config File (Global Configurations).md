@@ -357,19 +357,30 @@ animations {
 
 <summary>Animation Tree</summary>
 
+</br>
+
 ! gloabal</br>
 |</br>
 \* --- > \* <ins>`windows`</ins> - styles : <ins>slide</ins>, <ins>popin</ins>, <ins>gnomed</ins></br>
 |&emsp;&emsp;&emsp;|</br>
-|&emsp;&emsp;&emsp;\*<ins>windowsIn</ins> - window open - styles : same as windows</br>
-|&emsp;&emsp;&emsp;\*<ins>windowsOut</ins> - window close - styles : same as windows</br>
-|&emsp;&emsp;&emsp;\*<ins>windowsMove</ins> - window everything in between, moving, dragging, resizing.</br>
+|&emsp;&emsp;&emsp;\* `windowsIn` - window open</br>
+|&emsp;&emsp;&emsp;\* `windowsOut` - window close</br>
+|&emsp;&emsp;&emsp;\* `windowsMove` - everything in between, moving, dragging, resizing.</br>
 |</br>
-\* --- > \* <ins>layout</ins> - styles : `slide`, `popin`, `fade`</br>
+\* --- > \* `layout`- styles : <ins>slide</ins>, <ins>popin</ins>, <ins>fade</ins></br>
 |&emsp;&emsp;&emsp;|</br>
-|&emsp;&emsp;&emsp;\*<ins>layersIn</ins> - layer open</br>
-|&emsp;&emsp;&emsp;\*<ins>layersOut</ins> - layer close</br>
+|&emsp;&emsp;&emsp;\* `layersIn` - layer open</br>
+|&emsp;&emsp;&emsp;\*`layersOut` - layer close</br>
 |</br>
+\* --- > \* `fade`</br>
+|&emsp;&emsp;&emsp;|</br>
+|&emsp;&emsp;&emsp;\* `fadeIn` - fade in for window open</br>
+|&emsp;&emsp;&emsp;\* `fadeOut` - fade out for window close</br>
+|&emsp;&emsp;&emsp;\* `fadeSwitch` - fade on changing activewindow and its opacity</br>
+|&emsp;&emsp;&emsp;\* `fadeShadow` - fade on changing activewindow for shadows</br>
+|&emsp;&emsp;&emsp;\* `fadeDim` - the easing of the dimming of inactive windows</br>
+|&emsp;&emsp;&emsp;\* `fadeLayers` - for controlling fade on layers</br>
+|&emsp;&emsp;&emsp;|
 
 </details>
 
