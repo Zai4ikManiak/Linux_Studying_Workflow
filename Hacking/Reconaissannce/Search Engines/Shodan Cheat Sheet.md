@@ -988,13 +988,81 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 
 ---
 </details>
+<details>
+
+<summary><strong>ssl.cert.issuer.cn:</strong> <em>Sarch for devices whose SSL/TLS certificates were issued by a Certificate Authority (CA) with a specific <ins>Common Name (CN)</ins> in the issuer field.</em></summary>
+
+---
+> ***NOTE***
+>
+> Every SSL/TLS certificate has:
+> - A subject → who the certificate is for
+> - An issuer → who created/signed the certificate (the CA)
+>
+> ---
+>
+> Common issuer CNs include:
+> - `"Let's Encrypt"`
+> - `"Google Trust Services"`
+> - `"DigiCert TLS RSA SHA256 2020 CA1"`
+> - `"Cloudflare Inc ECC CA-3"`
+> - `"Amazon"`
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.issuer.cn:DigiCert` | `shodan search --limit 3 ssl.cert.issuer.cn:DigiCert` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.pubkey.bits:</strong> <em>Search for devices whose SSL/TLS certificates use a <ins>public key of a specific size</ins>, measured in <ins>bits</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> This refers to the size of the key inside the certificate — something publicly visible to anyone who looks at the certificate in a browser.
+>
+> ---
+>
+> Common public‑key sizes include:
+> 
+> RSA key sizes
+> - 2048 bits (standard and recommended)
+> - 3072 bits
+> - 4096 bits
+> - 1024
+> 
+> ECDSA key sizes
+> - `256`
+> - `384`
+> - `521`
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.pubkey.bits:1024` | `shodan search --limit 3 ssl.cert.pubkey.bits:1024` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.pubkey.type:</strong> <em>Search for devices based on the <ins>type of public key</ins> used in their SSL/TLS certificate.</em></summary>
+
+---
+> ***NOTE***
+>
+> Common public key types:
+> - `RSA`
+> - `ECDSA`
+> - `DSA`
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.pubkey.type:DSA` | `shodan search --limit 3 ssl.cert.pubkey.type:DSA` |
+---
+</details>
 
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `ssl.cert.issuer.cn` | search for hosts based on the *Common Name (CN)* of the *certificate issuer* — essentially, the Certificate Authority (CA) that signed the certificate. | `ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` | `shodan search --limit 3 ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` |
-| `ssl.cert.pubkey.bits` | Search for hosts based on the *size (in bits) of the public key* in the SSL/TLS certificate presented by the server. This is useful for identifying certificates that may be weak (small key sizes) or strong (modern large key sizes). | `ssl.cert.pubkey.bits:1024` | `shodan search --limit 3 ssl.cert.pubkey.bits:1024` |
-| `ssl.cert.pubkey.type` | Search for hosts based on the *type of public key* used in the SSL/TLS certificate the host presents. | `ssl.cert.pubkey.type:ECDSA` | `shodan search --limit 3 ssl.cert.pubkey.type:ECDSA` |
 | `ssl.cert.serial` | Search for hosts based on the *serial number of the SSL/TLS certificate* they present. | `ssl.cert.serial:0x1A2B3C4D5E6F` | `shodan search --limit 3 ssl.cert.serial:0x1A2B3C4D5E6F` |
 | `ssl.cert.subject.cn` | Search for hosts based on the *Common Name (CN)* in the *subject* of the SSL/TLS certificate they present. This represents the *primary domain or hostname* the certificate was issued for. | `ssl.cert.subject.cn:"example.com"` | `shodan search --limit 3 ssl.cert.subject.cn:"example.com"` |
 | `ssl.chain_count` | Search for hosts based on the *number of certificates in the SSL/TLS chain* presented by the server. | `ssl.chain_count:3` | `shodan search --limit 3 ssl.chain_count:3` |
