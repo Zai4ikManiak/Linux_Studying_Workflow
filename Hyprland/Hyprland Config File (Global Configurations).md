@@ -359,7 +359,7 @@ animations {
 
 ! gloabal</br>
 |</br>
-\* --- > \* <ins>windows</ins> - styles : `slide`, `popin`, `gnomed`</br>
+\* --- > \* <ins>`windows`</ins> - styles : <ins>slide</ins>, <ins>popin</ins>, <ins>gnomed</ins></br>
 |&emsp;&emsp;&emsp;|</br>
 |&emsp;&emsp;&emsp;\*<ins>windowsIn</ins> - window open - styles : same as windows</br>
 |&emsp;&emsp;&emsp;\*<ins>windowsOut</ins> - window close - styles : same as windows</br>
