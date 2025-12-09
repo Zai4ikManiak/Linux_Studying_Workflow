@@ -360,10 +360,11 @@ animations {
 ! gloabal</br>
 |</br>
 \* --- > \* <ins>windows</ins>: `slide`, `popin`, `gnomed`</br>
-&emsp;&emsp;&emsp;|</br>
-&emsp;&emsp;&emsp;\* <ins>windowsIn</ins> - window open - styles : same as windows
-&emsp;&emsp;&emsp;\* <ins>windowsOut</ins> - window close - styles : same as windows
-&emsp;&emsp;&emsp;\* <ins>windowsMove</ins> - window everything in between, moving, dragging, resizeing - styles : same as windows
+|&emsp;&emsp;&emsp;|</br>
+|&emsp;&emsp;&emsp;\*<ins>windowsIn</ins> - window open - styles : same as windows</br>
+|&emsp;&emsp;&emsp;\*<ins>windowsOut</ins> - window close - styles : same as windows</br>
+|&emsp;&emsp;&emsp;\*<ins>windowsMove</ins> - window everything in between, moving, dragging, resizeing - styles : same as windows</br>
+|</br>
 
 </details>
 
