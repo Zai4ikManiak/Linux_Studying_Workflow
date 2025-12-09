@@ -382,6 +382,29 @@ animations {
 |&emsp;&emsp;&emsp;\* `fadeLayers` - for controlling fade on layers</br>
 |&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
 |&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `fadeLayersIn` - fade in for layer open</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `fadeLayersOut` - fade out for layer close</br>
+|&emsp;&emsp;&emsp;|</br>
+|&emsp;&emsp;&emsp;\* `fadePopups` - for controlling fade on wayland popups</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `fadePopupsIn` - fade in for wayland popup open</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `fadePopupsOut` - fade out for wayland popup close</br>
+|&emsp;&emsp;&emsp;|</br>
+|&emsp;&emsp;&emsp;\* `fadeDpms` - for controlling fade when dpms is toggled</br>
+|</br>
+\* --- > \* `border` - for animating the border's color switch speed</br>
+\* --- > \* `borderangle` - for animating the border's gradient angle - styles: once (default), loop</br>
+|</br>
+\* --- > \* `workspace` - styles: <ins>slide</ins>, <ins>slidevert</ins>, <ins>fade</ins>, <ins>slidefade</ins>, <ins>slidefadevert</ins></br>
+|&emsp;&emsp;&emsp;|</br>
+|&emsp;&emsp;&emsp;\* `workspacesIn`</br>
+|&emsp;&emsp;&emsp;\* `workspacesOut`</br>
+|&emsp;&emsp;&emsp;\* `specialWorkspace`</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `specialWorkspaceIn`</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `specialWorkspaceOut`</br>  
+|</br>
+\* --- > \* `zoomFactor` - animates the screen zoom</br>
+\* --- > \* `monitorAdded` - monitor added zoom animation</br>
 
 </details>
 
