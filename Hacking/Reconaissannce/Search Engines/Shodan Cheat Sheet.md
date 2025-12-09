@@ -1059,13 +1059,67 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `ssl.cert.pubkey.type:DSA` | `shodan search --limit 3 ssl.cert.pubkey.type:DSA` |
 ---
 </details>
+<details>
+
+<summary><strong>ssl.cert.serial:</strong> <em>Search for devices by the <ins>serial number</ins> of their SSL/TLS certificate.</em></summary>
+
+---
+> ***NOTE***
+>
+> Every certificate has a unique serial number assigned by the certificate authority (CA) when it is issued.
+> 
+> Key points:
+> - Serial numbers are unique per CA.
+> - Used to identify, track, or revoke certificates.
+> - Useful for compliance checks, certificate inventory, or research.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.serial:1234567890` | `shodan search --limit 3 ssl.cert.serial:1234567890` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.subject.cn:</strong> <em>Search for devices whose SSL/TLS certificates have a specific <ins>Common Name (CN)</ins> in the <ins>subject</ins> field.</em></summary>
+
+---
+> ***NOTE***
+>
+> The subject is the entity the certificate is issued for — usually a domain name like:
+> - `example.com`
+> - `www.google.com`
+> - `api.cloudflare.com`
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.subject.cn:"google.com"` | `shodan search --limit 3 ssl.cert.subject.cn:"google.com"` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.chain_count:</strong> <em>Search for devices based on the <ins>length of the SSL/TLS certificate chain</ins> presented by the server.</em></summary>
+
+---
+> ***NOTE***
+>
+> When a server presents a certificate, it often doesn’t present a single certificate but a chain of certificates:
+> 1. Server certificate – issued to the domain (subject)
+> 2. Intermediate certificate(s) – issued by a trusted CA, linking the server certificate to a root CA
+> 3. Root certificate – the trusted CA certificate (usually in browsers/OS)
+>
+> The chain count is how many certificates are included in the chain that Shodan observed.
+> - A typical chain: 3 certificates (server + intermediate + root)
+> - Shorter or longer chains can happen depending on the CA or misconfigurations
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.chain_count:3` | `shodan search --limit 3 ssl.chain_count:3` |
+---
+</details>
 
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `ssl.cert.serial` | Search for hosts based on the *serial number of the SSL/TLS certificate* they present. | `ssl.cert.serial:0x1A2B3C4D5E6F` | `shodan search --limit 3 ssl.cert.serial:0x1A2B3C4D5E6F` |
-| `ssl.cert.subject.cn` | Search for hosts based on the *Common Name (CN)* in the *subject* of the SSL/TLS certificate they present. This represents the *primary domain or hostname* the certificate was issued for. | `ssl.cert.subject.cn:"example.com"` | `shodan search --limit 3 ssl.cert.subject.cn:"example.com"` |
-| `ssl.chain_count` | Search for hosts based on the *number of certificates in the SSL/TLS chain* presented by the server. | `ssl.chain_count:3` | `shodan search --limit 3 ssl.chain_count:3` |
 | `ssl.cipher.bits` | Search for hosts based on the *bit strength of the cipher* used in the SSL/TLS connection during the handshake. | `ssl.cipher.bits:128` | `shodan search --limit 3 ssl.cipher.bits:128` |
 | `ssl.cipher.name` | Search for hosts based on the *name of the cipher suite* used in the SSL/TLS connection during the handshake. | `ssl.cipher.name:TLS_AES_256_GCM_SHA384` | `shodan search --limit 3 ssl.cipher.name:TLS_AES_256_GCM_SHA384` |
 | `ssl.cipher.version` | Search for hosts based on the *TLS/SSL protocol version* negotiated during the handshake for a particular cipher. | `ssl.cipher.version:TLSv1` | `shodan search --limit 3 ssl.cipher.version:TLSv1` |
