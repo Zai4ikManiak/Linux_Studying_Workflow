@@ -351,5 +351,18 @@ animations {
 > 
 > <ins>The animations are a tree</ins>. If an animation is unset, it will inherit its parent’s values.
 
+</br>
+
+<details>
+
+<summary>Animation Tree</summary>
+
+! gloabal
+|
+\* --- > \* <ins>windows</ins>: `slide`, `popin`, `gnomed`
+	 |
+	 \* <ins>windowsIn</ins> 
+
+</details>
 
 </details>
