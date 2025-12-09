@@ -1116,16 +1116,121 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `ssl.chain_count:3` | `shodan search --limit 3 ssl.chain_count:3` |
 ---
 </details>
+<details>
 
+<summary><strong>ssl.cipher.bits:</strong> <em>Search for devices based on the <ins>strength of the encryption key</ins> used in the SSL/TLS connection, measured in <ins>bits</ins>.</em></summary>
 
-| Name | Description | Browser Example | Console Example |
-| :---: | :---: | :---: | :---: |
-| `ssl.cipher.bits` | Search for hosts based on the *bit strength of the cipher* used in the SSL/TLS connection during the handshake. | `ssl.cipher.bits:128` | `shodan search --limit 3 ssl.cipher.bits:128` |
-| `ssl.cipher.name` | Search for hosts based on the *name of the cipher suite* used in the SSL/TLS connection during the handshake. | `ssl.cipher.name:TLS_AES_256_GCM_SHA384` | `shodan search --limit 3 ssl.cipher.name:TLS_AES_256_GCM_SHA384` |
-| `ssl.cipher.version` | Search for hosts based on the *TLS/SSL protocol version* negotiated during the handshake for a particular cipher. | `ssl.cipher.version:TLSv1` | `shodan search --limit 3 ssl.cipher.version:TLSv1` |
-| `ssl.ja3s` | Search for hosts based on their *JA3S fingerprint* — the *server-side TLS fingerprint* created from the parameters a server uses in its *Server Hello* message during a TLS handshake. | `ssl.ja3s:"b32309a26951912be6e0c6d1b99b6f20"` | `shodan search --limit 3 ssl.ja3s:"b32309a26951912be6e0c6d1b99b6f20"` |
-| `ssl.jarm` | Search for hosts based on their *JARM fingerprint* — a server‑side TLS fingerprinting method created by Salesforce to identify, classify, or cluster servers by the way they respond to *multiple crafted TLS Client Hello probes*. | `ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` | `shodan search --limit 3 ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` |
-| `ssl.version` | Search for hosts based on the *SSL/TLS protocol version* they support or negotiate during the TLS handshake. | `ssl.version:TLSv1.2` | `shodan search --limit 3 ssl.version:TLSv1.2` |
+---
+> ***NOTE***
+>
+> - This refers to the symmetric encryption key negotiated during the TLS handshake (not the certificate’s public key).
+> - A higher number of bits generally means stronger encryption.
+> - This is public metadata — Shodan only indexes what the server advertises.
+> 
+> Common cipher bit sizes
+> - 128 bits
+> - 256 bits
+> - Older or weak ciphers may be 40, 56, 64 bits (insecure, rarely used today)
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cipher.bits:128` | `shodan search --limit 3 ssl.cipher.bits:128` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cipher.name:</strong> <em>Search for devices based on the <ins>specific encryption cipher</ins> a server supports in SSL/TLS connections.</em></summary>
+
+---
+> ***NOTE***
+>
+> - During a TLS handshake, the client and server agree on a cipher to use.
+> - A cipher defines how the data is encrypted and authenticated.
+> - This is public information — anyone observing a TLS handshake can see it.
+> 
+> Common TLS cipher examples
+> - `TLS_AES_256_GCM_SHA384` - TLS 1.3, strong encryption
+> - `TLS_CHACHA20_POLY1305_SHA256` - TLS 1.3, fast and secure
+> - `ECDHE-RSA-AES128-GCM-SHA256` - TLS 1.2, common modern cipher
+> - `AES256-SHA` - older TLS 1.0–1.1 cipher
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cipher.name:TLS_CHACHA20_POLY1305_SHA256` | `shodan search --limit 3 ssl.cipher.name:TLS_CHACHA20_POLY1305_SHA256` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cipher.version:</strong> <em>Search for devices based on the <ins>TLS/SSL protocol version</ins> associated with a specific cipher during the handshake.</em></summary>
+
+---
+> ***NOTE***
+>
+> - Every TLS/SSL connection negotiates both a cipher and a protocol version.
+> - This is public metadata — Shodan only indexes what the server advertises.
+> 
+> Common TLS/SSL versions
+> - `SSLv3` - outdated, insecure
+> - `TLSv1` - old, insecure
+> - `TLSv1.1` - old, insecure
+> - `TLSv1.2` - widely used, secure
+> - `TLSv1.3` - modern, secure
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cipher.version:"TLSv1.3"` | `shodan search --limit 3 ssl.cipher.version:"TLSv1.3"` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.ja3s:</strong> <em>Search for devices based on their <ins>JA3S TLS fingerprint</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> What is JA3S?
+> - JA3 - TLS fingerprint of the client (not used in Shodan filters)
+> - JA3S - TLS fingerprint of the server
+> 
+> A JA3S fingerprint is a hash created from the server’s TLS handshake information, such as:
+> - `Supported TLS versions`
+> - `Supported ciphers`
+> - `Supported extensions`
+> - `Supported elliptic curves`
+> 
+> ---
+>
+> The purpose is to identify server software behavior, similar to how a User-Agent identifies a browser.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.ja3s:771,4865-4867-4866-52393,29-23-24,65281` | `shodan search --limit 3 ssl.ja3s:771,4865-4867-4866-52393,29-23-24,65281` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.jarm:</strong> <em>Search Shodan for devices by their <ins>JARM fingerprint</ins>.</em></summary>
+
+---
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.jarm:abcdef1234567890` | `shodan search --limit 3 ssl.jarm:abcdef1234567890` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.version:</strong> <em>Search for devices based on the <ins>TLS/SSL protocol version</ins> they use during the TLS handshake.</em></summary>
+
+---
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.version:"TLSv1.2"` | `shodan search --limit 3 ssl.version:"TLSv1.2"` |
+
+</details>
+
+---
 
 </details>
 
