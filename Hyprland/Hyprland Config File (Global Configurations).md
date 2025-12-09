@@ -321,8 +321,8 @@ animations {
 	workspace_wraparound = true
 
 	# Default curves.
-	#	 	 Name,				X0,		Y0,	X1,	Y1	
-	besier = easeOutQuint,		0.23,	1,	0.32,	1
+	#	 	 Name,				X0,		Y0,		X1,	Y1	
+	besier = easeOutQuint,		0.23,	1,		0.32,	1
 	besier = easeInOutCubic,	0.65,	0.55,	0.36,	1
 
 }
