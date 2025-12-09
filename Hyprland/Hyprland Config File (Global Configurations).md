@@ -346,5 +346,10 @@ animations {
 > - `SPEED` is the amount of ds (1ds = 100ms) the animation will take.
 > - `CURVE` is the bezier curve name.
 > - `STYLE` (optional) is the animation style.
+> 
+> ---
+> 
+> <ins>The animations are a tree</ins>. If an animation is unset, it will inherit its parent’s values.
+
 
 </details>
