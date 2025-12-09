@@ -406,6 +406,30 @@ animations {
 \* --- > \* `zoomFactor` - animates the screen zoom</br>
 \* --- > \* `monitorAdded` - monitor added zoom animation</br>
 
+> **WARNING**
+> 
+> Using the loop style for borderangle requires Hyprland to constantly render new frames at a frequency equal to your screen’s refresh rate (e.g. 60 times per second for a 60hz monitor), which might stress your CPU/GPU and will impact battery life. 
+> 
+> This will apply even if animations are disabled or borders are not visible.
+
+---
+
+</details>
+<details>
+
+<summary>Curves</summary>
+
+</br>
+
+> **NOTE**
+>
+> `bezier = NAME, X0, Y0, X1, Y1` </br>
+> 
+> Where `NAME` is a name of your choice and `X0, Y0, X1, Y1` are the the two control points for a Cubic Bézier curve. </br>
+> </br>
+> A good website to design your own Bézier can be [css portal](https://www.cssportal.com/css-cubic-bezier-generator/)</br>
+> If you want to instead choose from a list of pre-made Béziers, you can check out [easings](https://easings.net/)</br>
+
 </details>
 
 </details>
