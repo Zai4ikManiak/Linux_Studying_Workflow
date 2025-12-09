@@ -233,6 +233,8 @@ decoration {
 }
 ```
 
+</br>
+
 | Name | Description | Type |
 | :--- | :--- | :--- |
 | `rounding` | Rounded corners’ radius (in layout px). | **int** |
@@ -253,6 +255,8 @@ decoration {
 <details>
 
 <summary><strong>blur</strong> <ins>subfunction</ins></summary>
+
+</br>
 
 | Name | Description | Type |
 | :--- | :--- | :--- |
@@ -281,6 +285,8 @@ decoration {
 
 <summary><strong>shadow</strong> <ins>subfunction</ins></summary>
 
+</br>
+
 | Name | Description | Type |
 | :--- | :--- | :--- |
 | `enabled` | Enable drop shadows on windows. | **bool** |
@@ -298,3 +304,31 @@ decoration {
 </details>
 
 ---
+
+<details>
+
+<summary><strong>Animations</strong></summary>
+
+</br>
+
+```c++
+# Example of default animation configuration
+
+animations {
+
+	# Enable animatinos for windows and workspaces.
+	enabled = true
+	workspace_wraparound = true
+
+	# Default curves.
+	#	 Name,			X0,	Y0,	X1,	Y1	
+	besier = easeOutQuint,		0.23,	1,	0.32,	1
+	besier = easeInOutCubic,	0.65,	0.55,	0.36,	1
+
+}
+
+```
+
+</br>
+
+</details>
