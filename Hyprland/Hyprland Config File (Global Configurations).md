@@ -330,7 +330,7 @@ animations {
 
 	# Animations
 	#			NAME,		ONOFF,	SPEED,	CURVE,		[STYLE]
-	animation =	global,		1,		10,	default
+	animation =	global,		1,		10,		default
 
 }
 
