@@ -221,6 +221,25 @@ decoration {
 
 <summary><strong>blur</strong> <ins>subfunction</ins></summary>
 
+| Name | Description | Type |
+| :--- | :--- | :--- |
+| `enabled` | Enable kawase window background blur. | **bool** |
+| `size` | Blur size (distance). | **int** |
+| `passes` | The amount of passes to perform. | **int** |
+| `ignore_opacity` | Make the blur layer ignore the opacity of the window. | **bool** |
+| `new_optimizations`</br> | Whether to enable further optimizations to the blur.</br> Recommended to leave on, as it will massively improve performance. | **bool** |
+| `xray`</br> | If enabled, floating windows will ignore tiled windows in their blur.</br>Only available if `new_optimizations` is true. Will reduce overhead on floating blur significantly. | **bool** |
+| `noise` | How much noise to apply. [0.0 - 1.0] | **float** |
+| `contrast` | Contrast modulation for blur. [0.0 - 2.0] | **float** |
+| `brightness` | Brightness modulation for blur. [0.0 - 2.0] | **float** |
+| `vibrancy` | Increase saturation of blurred colors. [0.0 - 1.0] | **float** |
+| `vibrancy_darkness` | How strong the effect of `vibrancy` is on dark areas . [0.0 - 1.0] | **float** |
+| `special` | Whether to blur behind the special workspace. (note: expensive) | **bool** |
+| `popups` | Whether to blur popups (e.g. right-click menus). | **bool** |
+| `popups_ignorealpha`</br> | Works like ignorealpha in layer rules.</br>If pixel opacity is below set value, will not blur. [0.0 - 1.0] | **float** |
+| `input_methods` | Whether to blur input methods (e.g. fcitx5) | **bool** |
+| `input_methods_ignorealpha`</br> | Works like ignorealpha in layer rules.</br>If pixel opacity is below set value, will not blur. [0.0 - 1.0] | **float** |
+
 </details>
 
 </details>
