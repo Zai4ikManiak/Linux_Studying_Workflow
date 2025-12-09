@@ -370,10 +370,10 @@ animations {
 	animation =	specialWorkspace,	1,		0.01,	linear
 
 	# Zoom
-	animation = zoomFactor,			1,	7,	quick
+	animation = zoomFactor,			1,		7,	quick
 
 	# Add Monitor
-	animation = monitorAdded,		1,	0.5,	almostLinear
+	animation = monitorAdded,		1,		0.5,	almostLinear
 
 }
 
