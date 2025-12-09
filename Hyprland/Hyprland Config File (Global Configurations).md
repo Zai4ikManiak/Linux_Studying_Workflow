@@ -332,6 +332,7 @@ animations {
 </br>
 
 | Name | Description | Type |
+| :--- | :--- | :--- |
 | `enabled` | Enable animations. | **bool** |
 | `workspace_wraparound` | Enable workspace wraparound, causing directional workspace animations to animate as if the first and last workspaces were adjacent | **bool** |
 
