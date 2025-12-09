@@ -329,9 +329,45 @@ animations {
 	bezier = quick,			0.15,	0,	0.1,	1
 
 	# Animations
-	#			NAME,		ONOFF,	SPEED,	CURVE,		[STYLE]
+	
+	# Global
 	animation =	global,		1,		10,		default
+	
+	# Border
+	animation =	border,		1,		5.39,		easeOutQuint
+	animation =	borderangle,	0,
+
+	# Windows
 	animation =	windows,	1,		4.79,	easeOutQuint
+	animation =	windowsIn,	1,		4.1,	easeOutQuint,	popin 87%
+	animation =	windowsOut,	1,		1.49,	easeOuuQuint,	popin 87%
+	animation =	windowsMove,	0,
+
+	# Fade
+	animation =	fade,		1,		3.03,	quick
+	animation =	fadeIn,		1,		1.73,	almostLinear
+	animation =	fadeOut,	1,		1.46,	almostLinear
+	animation =	fadeSwitch,	1,		1.3,	quick
+	animation =	fadeShadow,	1,		1.5,	quick
+	animation =	fadeDim,	1,		1.5,	almostLinear
+	animation =	fadeLayers,	1,		1.3,	linear
+	animation =	fadeLayersIn,	1,		1.79,	almostLinear
+	animation =	fadeLayersOut,	1,		1.39,	almostLinear
+	animation =	fadePopups,	1,		1.3,	quick
+	animation =	fadePopupsIn,	1,		1.3,	quick
+	animation =	fadePopupsOut,	1,		1.3,	quick
+	animation =	fadeDpms,		1,		1.3,	quick
+
+	# Layers
+	animation =	layers,			1,		3.81,	easeOutQuint
+	animation =	layersIn,		1,		4,	easeOutQuint, fade
+	animation =	layersOut,		1,		1.5,	linear
+
+	# Workspaces
+	animation =	workspaces,		1,		1.94,	almostLinear
+	animation =	workspacesIn,		1,		1.21,	almostLinear,	fade
+	animation =	workspacesOut,		1,		1.94,	almostLinear,	fade
+	animation =	specialWorkspace,	1,		0.01,	linear
 
 }
 
