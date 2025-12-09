@@ -909,23 +909,89 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 > This refers to the algorithm used to sign the certificate, not the encryption of the traffic itself
 > 
 > Common certificate signature algorithms include:
-> - RSA
-> - ECDSA
-> - sha256RSA
-> - sha1RSQ
-> - sha38ECDSA
+> - `RSA`
+> - `ECDSA`
+> - `sha256RSA`
+> - `sha1RSQ`
+> - `sha38ECDSA`
 
 | Browser Example | Console Example |
 | :---: | :---: |
 | `ssl.cert.alg:sha1RSA` | `shodan search --limit 3 ssl.cert.alg:sha1RSA` |
 ---
 </details>
+<details>
+
+<summary><strong>ssl.cert.expired:</strong> <em>Search for devices whose <ins>public SSL/TLS certificate is expired</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> A certificate can expire if the owner forgets to renew it.
+>
+> This doesn’t give any special access — it just describes the certificate metadata that any browser would show.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.expired:true` | `shodan search --limit 3 ssl.cert.expired:true` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.extension:</strong> <em>Search for devices whose SSL/TLS certificates contain <ins>specific X.509 extensions</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> A certificate extension is extra metadata added to a certificate to define how it can be used, such as:
+> - Allowed purposes (e.g., server authentication)
+> - Alternative domain names
+> - Key usage
+> - CRL/OCSP information
+> - Certificate policies
+>
+> ---
+> Common Certification Extensions
+> - `subjectAltName` - lists additional domain names
+> - `keyUsage` - what the key can do (e.g., digitalSignature, keyEncipherment)
+> - `basicConstraints` - whether the certificate is a CA
+> - `extendedKeyUsage` - extra allowed uses (e.g., serverAuth)
+> - `certificatePolicies`
+> - `crlDistributionPoints`
+> - `authorityInfoAccess`
+>
+> ---
+> Different certificates may have different extensions.
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.extension:certificatePolicies` | `shodan search --limit 3 ssl.cert.extension:certificatePolicies` |
+---
+</details>
+<details>
+
+<summary><strong>ssl.cert.fingerprint:</strong> <em>Search for devices whose SSL/TLS certificate matches a <ins>specific fingerprint</ins>.</em></summary>
+
+---
+> ***NOTE***
+>
+> A certificate fingerprint is a hash (often SHA-1 or SHA-256) of the certificate’s public data.
+> It is used for:
+> - Identifying a certificate uniquely
+> - Verifying whether two certificates are the same
+> - Tracking certificate changes
+> - Detecting misconfigurations
+
+| Browser Example | Console Example |
+| :---: | :---: |
+| `ssl.cert.fingerprint:AB:CD:EF:12:34:56:78:90:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55` | `shodan search --limit 3 ssl.cert.fingerprint:AB:CD:EF:12:34:56:78:90:AA:BB:CC:DD:EE:FF:00:11:22:33:44:55` |
+
+---
+</details>
+
 
 | Name | Description | Browser Example | Console Example |
 | :---: | :---: | :---: | :---: |
-| `ssl.cert.expired` | Search for hosts based on whether the SSL/TLS certificate they presented is currently expired. | `ssl.cert.expired:true` | `shodan search --limit 3 ssl.cert.expired:true` |
-| `ssl.cert.extension` | Search for hosts based on the X.509 certificate extensions present in the certificate the host provides. | `ssl.cert.extension:certificatePolicies` | `shodan search --limit 3 ssl.cert.extension:certificatePolicies` |
-| `ssl.cert.fingerprint` | Search for hosts by the *cryptographic fingerprint (hash)* of the certificate they present during the TLS handshake. | `ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` | `shodan search --limit 3 ssl.cert.fingerprint:AB:CD:EF:01:23:45:67:89:AA:BB:CC:DD:EE:FF:11:22:33:44:55:66` |
 | `ssl.cert.issuer.cn` | search for hosts based on the *Common Name (CN)* of the *certificate issuer* — essentially, the Certificate Authority (CA) that signed the certificate. | `ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` | `shodan search --limit 3 ssl.cert.issuer.cn:"DigiCert TLS RSA SHA256 2020 CA1"` |
 | `ssl.cert.pubkey.bits` | Search for hosts based on the *size (in bits) of the public key* in the SSL/TLS certificate presented by the server. This is useful for identifying certificates that may be weak (small key sizes) or strong (modern large key sizes). | `ssl.cert.pubkey.bits:1024` | `shodan search --limit 3 ssl.cert.pubkey.bits:1024` |
 | `ssl.cert.pubkey.type` | Search for hosts based on the *type of public key* used in the SSL/TLS certificate the host presents. | `ssl.cert.pubkey.type:ECDSA` | `shodan search --limit 3 ssl.cert.pubkey.type:ECDSA` |
@@ -939,7 +1005,7 @@ The filter uses the **ISO-3166-1 alpha-2** country code (two-letter code), not t
 | `ssl.jarm` | Search for hosts based on their *JARM fingerprint* — a server‑side TLS fingerprinting method created by Salesforce to identify, classify, or cluster servers by the way they respond to *multiple crafted TLS Client Hello probes*. | `ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` | `shodan search --limit 3 ssl.jarm:"2ad2ad0002ad2ad0002ad2ad2ad2ad000d7c3f6f8a4a3d0f66f03b6e3f6c4"` |
 | `ssl.version` | Search for hosts based on the *SSL/TLS protocol version* they support or negotiate during the TLS handshake. | `ssl.version:TLSv1.2` | `shodan search --limit 3 ssl.version:TLSv1.2` |
 
-
+</details>
 
 <details>
 
