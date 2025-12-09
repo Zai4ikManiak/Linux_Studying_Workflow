@@ -380,7 +380,8 @@ animations {
 |&emsp;&emsp;&emsp;\* `fadeShadow` - fade on changing activewindow for shadows</br>
 |&emsp;&emsp;&emsp;\* `fadeDim` - the easing of the dimming of inactive windows</br>
 |&emsp;&emsp;&emsp;\* `fadeLayers` - for controlling fade on layers</br>
-|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;|
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; |</br>
+|&emsp;&emsp;&emsp;|&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; \* `fadeLayersIn` - fade in for layer open</br>
 
 </details>
 
