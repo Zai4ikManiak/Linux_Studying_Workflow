@@ -15,6 +15,11 @@ flowchart TB
 
     KERNEL --> WAYLAND --> HYPR
 
+    %% Define tooltips
+    classDef tootip1 title:"Handles low-level hardware interfaces"
+
+    class Kernel tooltip1
+
     %% ─────────────────────────────
     %% Core Branches
     %% ─────────────────────────────
