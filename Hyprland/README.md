@@ -13,4 +13,13 @@ flowchart TD
 
     Kernel --> Wayland --> Core
 
+    %% Parallel subsystems
+    Input["Input & Binds</br>Keyboard / Mouse / Touch / Gestures"]:::blue
+    Config["Configuration</br>monitor - workspace - rules"]:::green
+    Security["Security & Permissions"]:::red
+
+    Core --> Input
+    Core --> Config
+    Core --> Security
+
 ```
