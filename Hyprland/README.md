@@ -5,51 +5,77 @@ This is my workflow of studying the Hyprland functionality.
 ### Cheat Sheet
 
 ```mermaid
-flowchart TD
-    %% Core stack
-    Kernel["Linux Kernel</br>DRM / KMS / Input"]:::cyan
-    Wayland["Wayland Protocol"]:::cyan
-    Core["Hyprland Core</br>(Compositor)"]:::cyan
+flowchart TB
+    %% ─────────────────────────────
+    %% Kernel / Wayland Layer
+    %% ─────────────────────────────
+    KERNEL["Linux Kernel<br/>DRM / KMS"]
+    WAYLAND["Wayland<br/>Protocol"]
+    HYPR["Hyprland Core<br/>[Compositor]"]
 
-    %% Parallel subsystems
-    Input["Input & Binds</br>Keyboard / Mouse / Touch / Gestures"]:::blue
-    Config["Configuration</br>monitor - workspace - rules"]:::green
-    Security["Security & Permissions"]:::red
+    KERNEL --> WAYLAND --> HYPR
 
-    Monitors["Monitors"]:::cyan
-    Workspaces["Workspaces"]:::yellow
-    Layout["Layout Engine<\br>dwindle / master"]:::yellow
-    Windows["Windows"]:::yellow
-    Layers["Layers"]:::yellow
-    Decor["Decorations & Effects"]:::yellow
-    Anim["Animation"]:::yellow
-    Renderer["Renderer</br>VFR / Tearing"]:::cyan
-    Output["Monitor Output"]:::cyan
-    External["External Clients"]:::megenta
-    IPC["IPC / hyprctl"]:::magenta
+    %% ─────────────────────────────
+    %% Core Branches
+    %% ─────────────────────────────
+    INPUT["INPUT / BINDS<br/>keyboard / mouse<br/>gestures / binds"]
+    CONFIG["CONFIGURATION<br/>general / monitor<br/>workspace / layouts<br/>windowrule / layerrule<br/>animations / decoration"]
+    SECURITY["SECURITY<br/>permissions<br/>allow_exec<br/>allow_input"]
 
-    Kernel --> Wayland --> Core
+    HYPR --> INPUT
+    HYPR --> CONFIG
+    HYPR --> SECURITY
 
-    Core --> Monitors --> Workspaces --> Layout --> Windows --> Layers --> Decor --> Anim --> Renderer --> Output
+    %% ─────────────────────────────
+    %% Dispatcher & Monitor Flow
+    %% ─────────────────────────────
+    DISPATCH["DISPATCHER<br/>Binds → Dispatcher"]
+    MONITORS["Monitors<br/>monitor"]
 
-    Core --> Input --> Windows
-    Core --> Config
-    Core --> Security
-    Renderer --> External --> IPC
+    INPUT --> DISPATCH
+    CONFIG --> MONITORS
+    MONITORS --> DISPATCH
 
-    classDef blue fill:#0b3c5d, stroke:#ffffff
-    classDef green fill:#0f3d2e, stroke:#ffffff
-    classDef yellow fill:#4a3b00, stroke:#ffffff
-    classDef cyan fill:#003b44, stroke:#ffffff
-    classDef magenta fill:#3a003a, stroke:#ffffff
+    %% ─────────────────────────────
+    %% Rendering Pipeline
+    %% ─────────────────────────────
+    WORKSPACES["Workspaces<br/>workspace"]
+    LAYOUT["Layout Engine<br/>dwindle / master"]
+    WINDOWS["Windows<br/>windowrule / float"]
+    LAYERS["Layers<br/>layerrule"]
+    DECOR["Decorations & Effects<br/>blur / decoration"]
+    ANIM["Animations"]
+    RENDER["Renderer<br/>misc.vfr<br/>allow_tearing"]
+    OUTPUT["Monitor Output"]
+    CLIENTS["External Clients<br/>exec / xwayland"]
+    IPC["IPC / Runtime<br/>hyprctl"]
 
-subgraph LEGEND["Legend"]
-    direction TB
-    LT1["Input / Binds"]:::blue
-    LT2["Configuration"]:::green
-    LT3["Windows / Layouts / Layers"]:::yellow
-    LT4["Security"]:::cyan
-    LT5["Security"]:::red
-    LT6["External"]:::magenta
-end
+    DISPATCH --> WORKSPACES
+    WORKSPACES --> LAYOUT
+    LAYOUT --> WINDOWS
+    WINDOWS --> LAYERS
+    LAYERS --> DECOR
+    DECOR --> ANIM
+    ANIM --> RENDER
+    RENDER --> OUTPUT
+    OUTPUT --> CLIENTS
+    CLIENTS --> IPC
+
+    %% ─────────────────────────────
+    %% Styling (Dark Theme Friendly)
+    %% ─────────────────────────────
+    classDef cyan fill:#0f2a33,stroke:#4dd0e1,color:#e0f7fa
+    classDef blue fill:#10243a,stroke:#64b5f6,color:#e3f2fd
+    classDef green fill:#0f2f1f,stroke:#66bb6a,color:#e8f5e9
+    classDef red fill:#331010,stroke:#ef5350,color:#ffebee
+    classDef yellow fill:#332b0f,stroke:#fbc02d,color:#fff8e1
+    classDef magenta fill:#2b0f2f,stroke:#ce93d8,color:#f3e5f5
+
+    class KERNEL,WAYLAND,HYPR,MONITORS,RENDER,OUTPUT cyan
+    class INPUT,DISPATCH blue
+    class CONFIG green
+    class SECURITY red
+    class WORKSPACES,LAYOUT,WINDOWS,LAYERS,DECOR,ANIM yellow
+    class CLIENTS,IPC magenta
+
 ```
