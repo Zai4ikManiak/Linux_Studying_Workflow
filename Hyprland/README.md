@@ -18,7 +18,7 @@ flowchart TB
     %% Define tooltips
     classDef tootip1 title:"Handles low-level hardware interfaces"
 
-    class Kernel tooltip1
+    class KERNEL tooltip1
 
     %% ─────────────────────────────
     %% Core Branches
