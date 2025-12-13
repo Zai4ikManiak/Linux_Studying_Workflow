@@ -37,9 +37,9 @@ flowchart TD
     Core --> Security
     Renderer --> External --> IPC
 
-    classDef blue fill:#cce5ff, stroke:#004085
-    classDef green fill:#d4edda, stroke:#155724
-    classDef yellow fill:#fff3cd, stroke:#856404
-    classDef cyan fill:#d1ecf1, stroke:#0c5460
-    classDef magenta fill:#f3d7ff, stroke:#5a1a6a
+    classDef blue fill:#0b3c5d, stroke:#ffffff
+    classDef green fill:#0f3d2e, stroke:#ffffff
+    classDef yellow fill:#4a3b00, stroke:#ffffff
+    classDef cyan fill:#003b44, stroke:#ffffff
+    classDef magenta fill:#3a003a, stroke:#ffffff
 ```
