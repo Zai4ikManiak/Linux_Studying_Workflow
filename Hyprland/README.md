@@ -4,7 +4,7 @@ This is my workflow of studying the Hyprland functionality.
 
 ### Cheat Sheet
 
-&emsp;&emsp;\*--------------\*
-&emsp;&emsp;| Hyprland Core |
-&emsp;&emsp;| \[Compositor\] |
-&emsp;&emsp;\*--------------\*
+&emsp;&emsp;\*--------------\*</br>
+&emsp;&emsp;| Hyprland Core |</br>
+&emsp;&emsp;| \[Compositor\] |</br>
+&emsp;&emsp;\*--------------\*</br>
