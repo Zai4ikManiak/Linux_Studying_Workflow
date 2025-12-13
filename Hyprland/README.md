@@ -42,4 +42,14 @@ flowchart TD
     classDef yellow fill:#4a3b00, stroke:#ffffff
     classDef cyan fill:#003b44, stroke:#ffffff
     classDef magenta fill:#3a003a, stroke:#ffffff
+
+subgraph LEGEND["Legend"]
+    direction TB
+    LT1["Input / Binds"]:::blue
+    LT2["Configuration"]:::green
+    LT3["Windows / Layouts / Layers"]:::yellow
+    LT4["Security"]:::cyan
+    LT5["Security"]:::red
+    LT6["External"]:::magenta
+end
 ```
