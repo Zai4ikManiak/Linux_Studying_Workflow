@@ -5,15 +5,26 @@ This is my workflow of studying the Hyprland functionality.
 ### Cheat Sheet
 
 ```mermaid
-flowchart TB
+flowchart LR
     %% ─────────────────────────────
     %% Kernel / Wayland Layer
     %% ─────────────────────────────
-    KERNEL["Linux Kernel<br/>DRM / KMS"]
-    WAYLAND["Wayland<br/>Protocol"]
-    HYPR["Hyprland Core<br/>[Compositor]"]
+    
+    %%KERNEL["Linux Kernel<br/>DRM / KMS"]
+    %%WAYLAND["Wayland<br/>Protocol"]
+    %%HYPR["Hyprland Core<br/>[Compositor]"]
 
-    KERNEL --> WAYLAND --> HYPR
+    %%KERNEL --> WAYLAND --> HYPR
+
+
+    subgraph Kernel / Wayland
+        KERNEL["Linux Kernel"]
+        WAYLAND["Wayland Protocol"]
+        KERNEL --> WAYLAND
+    end
+
+    HYPR["Hyprland Core"]
+    WAYLAND --> HYPR
 
     %% ─────────────────────────────
     %% Core Branches
