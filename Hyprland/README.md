@@ -5,7 +5,7 @@ This is my workflow of studying the Hyprland functionality.
 ### Cheat Sheet
 
 ```mermaid
-flowchart LR
+flowchart TB
     %% ─────────────────────────────
     %% Kernel / Wayland Layer
     %% ─────────────────────────────
